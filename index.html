@@ -311,17 +311,34 @@
       {
         id: "mixed-status",
         name: "The Ramirez Family — Mixed-Status Family",
-        description: "Two parents (ITINs, no SSNs), 3 US-citizen kids (ages 3, 8, 13). Dad: construction. Mom: house cleaning.",
-        monthlyIncome: 3100,
+        description: "Two parents (ITINs, no SSNs), 3 US-citizen kids (ages 3, 8, 13). Dad: landscaping crew. Mom: house cleaning.",
+        monthlyIncome: 2200,
         members: 5,
         mixedStatus: true,
-        baselineQuality: 35,
-        baselineNote: "This family starts at 35% stability. They are excluded from Medicaid (parents), TANF, housing assistance, and the EITC. Under the TCJA (2018\u20132025), they could claim the Child Tax Credit for their US-citizen children \u2014 about $5,820/year. H.R. 1 — popularly known as the One Big Beautiful Bill (OBBB), signed July 2025 — took that away by requiring the filer to have an SSN. Their remaining safety net is SNAP (pro-rated for eligible members only), children\u2019s Medicaid, school meals, and WIC. Even before any cuts begin, this family runs a monthly deficit \u2014 they are structurally vulnerable by design, and the OBBB made it worse.",
-        benefits: { snap: 516, childMedicaid: 900, schoolLunch: 195, wic: 75 },
-        annualCredits: { ctc: 0, eitc: 0, ctcNote: "Under the TCJA (2018\u20132025), ITIN-filing parents could claim the CTC for children with valid SSNs \u2014 about $5,820/year. The OBBB now requires the filer to have an SSN, locking this family out entirely. They lost an estimated ~$720 in nonrefundable CTC (based on estimated tax liability) plus ~$5,100 in refundable ACTC ($1,700/child).", eitcNote: "The EITC has always required the filer to have a valid SSN. ITIN filers are ineligible regardless of their children's status." },
-        expenses: { housing: 1580, food: 880, healthcare: 390, childcare: 520, transportation: 400, utilities: 240, clothing: 140, phone: 70, remittances: 150, other: 110 },
-        story: "Carlos and Elena have lived in the US for 14 years. They pay taxes with ITINs, contribute to Social Security they\u2019ll never collect, and their three children are American citizens. The parents have no access to Medicaid, TANF, or housing assistance \u2014 though their US-citizen children qualify for children\u2019s Medicaid on their own. Under the TCJA, they could claim the Child Tax Credit for their citizen children \u2014 about $5,820/year that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, that credit was taken away: the new law requires the filer to have an SSN, not just the children. They\u2019ve never been eligible for the EITC, which has always required the filer to have an SSN. As of 2026, they pay approximately $1,100 annually into a Medicare Trust Fund they are legally barred from ever using \u2014 part of the $6.4 billion undocumented immigrants contribute to Medicare each year.",
+        baselineQuality: 30,
+        baselineNote: "This family starts at 30% stability. They are excluded from Medicaid (parents), TANF, housing assistance, and the EITC. Under the TCJA (2018\u20132025), they could claim the Child Tax Credit for their US-citizen children \u2014 about $3,600/year in refundable credits. H.R. 1 \u2014 popularly known as the One Big Beautiful Bill (OBBB), signed July 2025 \u2014 took that away by requiring the filer to have an SSN. Their remaining safety net is SNAP (pro-rated for eligible members only), children\u2019s Medicaid, school meals, and WIC. Even before any cuts begin, this family runs a monthly deficit \u2014 they are structurally vulnerable by design, and the OBBB made it worse.",
+        benefits: { snap: 552, childMedicaid: 900, schoolLunch: 195, wic: 75 },
+        annualCredits: { ctc: 0, eitc: 0, ctcNote: "Under the TCJA (2018\u20132025), ITIN-filing parents could claim the CTC for children with valid SSNs \u2014 about $3,600/year in refundable ACTC (15% of earnings over $2,500, capped at $1,700/child). The OBBB now requires the filer to have an SSN, locking this family out entirely.", eitcNote: "The EITC has always required the filer to have a valid SSN. ITIN filers are ineligible regardless of their children's status." },
+        expenses: { housing: 1200, food: 720, healthcare: 250, childcare: 350, transportation: 300, utilities: 200, clothing: 80, phone: 60, remittances: 150, other: 70 },
+        story: "Carlos and Elena have lived in the US for 14 years. Carlos works on a landscaping crew \u2014 mowing, edging, planting \u2014 paid in cash, typically between $11 and $14 an hour depending on the job, averaging about 30 hours a week. Elena cleans two houses a week at $80\u2013$120 each, also cash. Together they bring in roughly $2,200 a month \u2014 more in summer when Carlos gets extra hours, less when it rains. They pay taxes with ITINs, contribute to Social Security they\u2019ll never collect, and their three children are American citizens. The parents have no access to Medicaid, TANF, or housing assistance \u2014 though their US-citizen children qualify for children\u2019s Medicaid on their own. Under the TCJA, they could claim the Child Tax Credit for their citizen children \u2014 about $3,600/year in refundable credits that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, that credit was taken away: the new law requires the filer to have an SSN, not just the children. They\u2019ve never been eligible for the EITC, which has always required the filer to have an SSN. As of 2026, they pay approximately $800 annually into a Medicare Trust Fund they are legally barred from ever using \u2014 part of the $6.4 billion undocumented immigrants contribute to Medicare each year.",
         statusNote: "This family files taxes with ITINs because the parents don\u2019t have SSNs. Their US-citizen children have SSNs. Under the TCJA (2018\u20132025), only the child needed an SSN for the CTC \u2014 so this family could claim it. The OBBB changed that: now the filer must also have an SSN. The EITC has always required the filer to have an SSN, so they\u2019ve never been eligible for that credit.",
+      },
+      {
+        id: "undocumented",
+        name: "The Chen Family — Fully Undocumented",
+        description: "Two parents (both undocumented, ITINs), 2 children born in China (ages 4, 10). Dad: restaurant kitchen. Mom: garment alterations. Family of four in one rented room.",
+        incomeNote: "Wei works as a line cook in a Chinese restaurant for approximately $16/hour, averaging 28 hours/week. Lihua does alterations and piecework at a garment shop for roughly $14/hour, averaging 10 hours/week. Combined gross: ~$2,200/month ($26,400/year). Both file taxes with ITINs.",
+        monthlyIncome: 2200,
+        members: 4,
+        mixedStatus: false,
+        fullyUndocumented: true,
+        baselineQuality: 28,
+        baselineNote: "This family starts at 28% stability — the lowest of any household in the simulator. They are excluded from SNAP, Medicaid (federal), TANF, housing assistance, LIHEAP, and all federal tax credits. The federal safety net was never built for them. Their only federal benefits are WIC (no status verification) and school meals (no status verification).",
+        benefits: { schoolLunch: 65, wic: 75 },
+        annualCredits: { ctc: 0, eitc: 0, ctcNote: "The CTC has always required the child to have an SSN. This family's children were born in China and do not have SSNs. The parents file with ITINs. They have never been eligible for the Child Tax Credit.", eitcNote: "The EITC requires the filer to have a valid SSN. ITIN filers are ineligible. This family has never been eligible for the federal EITC." },
+        expenses: { housing: 850, food: 580, healthcare: 0, childcare: 0, transportation: 160, utilities: 0, clothing: 20, phone: 40, remittances: 150, other: 40 },
+        story: "Wei and Lihua Chen arrived in the US in early 2023 via the z\u01D2uxi\xE0n route \u2014 a pipeline that has brought tens of thousands of Chinese nationals through Ecuador and Central America to the US-Mexico border. They were fleeing economic hardship and political pressure in Fujian province. They settled in a city with an established Chinese community, renting a single room in a shared house for $850/month \u2014 all four of them in one room. Wei found work in a restaurant kitchen; Lihua does alterations at a garment shop. They have no health insurance. Mei (10) is in 4th grade; Jun (4) stays with a neighbor or comes to the garment shop with Lihua because they can\u2019t afford formal childcare. The family eats simply \u2014 rice, vegetables, whatever Wei brings home from the restaurant kitchen. Clothing comes from church donations and hand-me-downs. They have no car; Wei bikes to work and Lihua walks. Utilities are included in their room rent. The Chens file taxes with ITINs, contribute to Social Security they will never collect, and have never been eligible for a single federal tax credit or cash benefit. They send $150/month to Wei\u2019s parents in Fujian \u2014 a non-negotiable obligation that comes before almost everything else. The formal safety net barely knows they exist.",
+        statusNote: "This family is fully undocumented. No member has an SSN, green card, or any qualified immigration status. The parents file taxes with ITINs. The children were born in China. They are ineligible for SNAP, federal Medicaid, TANF, housing vouchers, LIHEAP, the EITC, and the CTC. Their only federal benefits are programs that do not verify immigration status: WIC and school meals.",
       },
       {
         id: "middle-class",
@@ -359,13 +376,25 @@
         cutPercent: 0, isAwarenessRound: true, getCutPercent: () => 0,
         context: "CBO estimates that tightened eligibility rules will cause significant reductions in SNAP participation among lawfully present immigrants. The chilling effect \u2014 where eligible families avoid applying out of fear \u2014 could reduce participation by millions more.",
         impactAreas: [],
-        appliesTo: (hh) => hh.mixedStatus,
-        getAwarenessContent: (household) => ({
-          type: "excluded", heading: "Your family\u2019s SNAP benefits are at risk",
-          message: "Even though the " + (household.isCustom ? "children in this household" : "Ramirez children") + " are U.S. citizens and qualify for SNAP, the OBBB\u2019s tightened immigration categories and the fear of immigration enforcement create real barriers. Many mixed-status families stop applying for benefits their children are legally entitled to, choosing hunger over the risk of exposure. Household benefit calculations that exclude ineligible members mean smaller checks even when families do apply.",
-          secondaryMessage: "This is the \u2018chilling effect\u2019 \u2014 a policy that technically allows citizen children to receive help, while systematically discouraging families from seeking it.",
-          qualityPenalty: 15,
-        }),
+        appliesTo: (hh) => hh.mixedStatus || hh.fullyUndocumented,
+        getAwarenessContent: (household) => {
+          if (household.fullyUndocumented) {
+            const familyName = household.isCustom ? "This family" : "The Chen family";
+            return {
+              type: "excluded",
+              heading: familyName + " was never eligible for SNAP",
+              message: familyName + " has no access to SNAP — no member of this household meets the citizenship or qualified immigration status requirements. They cannot apply, even for the children. The OBBB\u2019s tightened immigration categories reinforce what was already true for this family: the federal food assistance system does not include them. Their only food support is WIC (which does not verify immigration status) and what they can stretch from their income.",
+              secondaryMessage: "The tightened enforcement climate also creates fear. " + familyName + " may avoid WIC renewals, school meal paperwork, or any interaction with government agencies — even for programs they qualify for.",
+              qualityPenalty: 10,
+            };
+          }
+          return {
+            type: "excluded", heading: "Your family\u2019s SNAP benefits are at risk",
+            message: "Even though the " + (household.isCustom ? "children in this household" : "Ramirez children") + " are U.S. citizens and qualify for SNAP, the OBBB\u2019s tightened immigration categories and the fear of immigration enforcement create real barriers. Many mixed-status families stop applying for benefits their children are legally entitled to, choosing hunger over the risk of exposure. Household benefit calculations that exclude ineligible members mean smaller checks even when families do apply.",
+            secondaryMessage: "This is the \u2018chilling effect\u2019 \u2014 a policy that technically allows citizen children to receive help, while systematically discouraging families from seeking it.",
+            qualityPenalty: 15,
+          };
+        },
       },
       {
         id: "oaa-nutrition", title: "Older Americans Act & LIHEAP Cuts", chartLabel: "OAA / LIHEAP", programKey: ["mealProgram", "liheap"],
@@ -445,35 +474,92 @@
         impactAreas: [],
         appliesTo: (hh) => {
           const credits = hh.annualCredits || {};
-          return (credits.ctc || 0) > 0 || (credits.eitc || 0) > 0 || credits.ineligible || hh.mixedStatus;
+          return (credits.ctc || 0) > 0 || (credits.eitc || 0) > 0 || credits.ineligible || hh.mixedStatus || hh.fullyUndocumented;
         },
         getAwarenessContent: (household) => {
+          if (household.fullyUndocumented) {
+            const caStateCredits = (household.caAnnualCredits && household.caAnnualCredits.caleitc) || 0;
+            const hasCACredits = household.caState && caStateCredits > 0;
+            const caStateCreditsStr = "$" + caStateCredits.toLocaleString();
+            const familyName = household.isCustom ? "This family" : "The Chen family";
+            const caMessage = hasCACredits
+              ? " But California recognizes their contributions: as ITIN filers, they are eligible for CalEITC and the Young Child Tax Credit, worth " + caStateCreditsStr + "/year. This is the only tax credit this family has ever been able to claim."
+              : household.caState
+                ? " California's CalEITC and Young Child Tax Credit allow ITIN filers to claim state tax credits — but this household's income exceeds the $32,900 eligibility threshold."
+                : "";
+            return {
+              type: "excluded",
+              heading: hasCACredits ? (familyName + " was never eligible — but California provides " + caStateCreditsStr + "/year") : (familyName + " has never been eligible for federal tax credits"),
+              message: familyName + " files taxes with ITINs. No member of this household has a Social Security Number. The CTC requires the child to have an SSN — their children, born in China, do not. The EITC requires the filer to have an SSN. These are not new exclusions from the OBBB — this family has been locked out of federal tax credits from the start. They pay into Social Security and Medicare every paycheck, but the tax code has never recognized their children or their labor with a single dollar of credit." + caMessage,
+              secondaryMessage: hasCACredits
+                ? "The federal tax system excludes them entirely. California is the only government that gives them anything back."
+                : "They pay taxes. They get nothing back. The federal safety net was designed as if they don't exist.",
+              qualityPenalty: hasCACredits ? 0 : 5,
+            };
+          }
           if (household.mixedStatus) {
             const numChildren = household.isCustom ? (household.children || 0) : 3;
-            const ctcLost = numChildren * 2200;
+            const annualIncome = household.monthlyIncome * 12;
+            const ctcLost = Math.min(numChildren * 1700, Math.max(0, (annualIncome - 2500) * 0.15));
             const ctcLostStr = "$" + ctcLost.toLocaleString();
             const childrenDesc = numChildren === 1 ? "their US-citizen child" : ("their " + numChildren + " US-citizen children");
+
+            // CA CalEITC/YCTC: ITIN filers ARE eligible — partially replaces lost federal credits
+            const caStateCredits = (household.caAnnualCredits && household.caAnnualCredits.caleitc) || 0;
+            const hasCACredits = household.caState && caStateCredits > 0;
+            const netLoss = hasCACredits ? Math.max(0, ctcLost - caStateCredits) : ctcLost;
+            const netLossStr = "$" + netLoss.toLocaleString();
+            const caStateCreditsStr = "$" + caStateCredits.toLocaleString();
+
+            // CA buffer messaging
+            const caBufferMsg = hasCACredits
+              ? " However, because this household is in California, they are eligible for the CalEITC and Young Child Tax Credit (YCTC) — worth " + caStateCreditsStr + "/year. Unlike federal tax credits, California allows ITIN filers to claim these credits. This partially offsets the federal loss, but a gap of " + netLossStr + "/year remains."
+              : household.caState
+                ? " California's CalEITC and Young Child Tax Credit (YCTC) allow ITIN filers to claim state tax credits — a critical difference from federal policy. However, this household's income exceeds the $32,900 CalEITC eligibility limit, so the state credits do not apply here."
+                : "";
+
             if (household.isCustom) {
               return {
-                type: "excluded", heading: "Your family already lost " + ctcLostStr + " a year",
-                message: "Under the TCJA (2018\u20132025), ITIN-filing parents could claim the Child Tax Credit for " + childrenDesc + " \u2014 about " + ctcLostStr + "/year that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, it required the filer to have an SSN, not just the children. Because the parents in this household file with ITINs, they were locked out entirely. They were never eligible for the EITC (which has always required filer SSNs), and now they\u2019ve lost the one tax credit their citizen children qualified them for. This loss is already reflected in your household\u2019s baseline stability score.",
-                secondaryMessage: "These parents still file taxes. They still pay into Social Security and Medicare \u2014 approximately $1,100/year into a Medicare Trust Fund they are legally barred from ever using. But the one credit that recognized their children as Americans has been taken away.",
+                type: "excluded", heading: hasCACredits ? ("Federal credits lost: " + ctcLostStr + "/year — California offsets " + caStateCreditsStr) : ("Your family already lost " + ctcLostStr + " a year"),
+                message: "Under the TCJA (2018\u20132025), ITIN-filing parents could claim the Child Tax Credit for " + childrenDesc + " \u2014 about " + ctcLostStr + "/year that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, it required the filer to have an SSN, not just the children. Because the parents in this household file with ITINs, they were locked out entirely. They were never eligible for the EITC (which has always required filer SSNs), and now they\u2019ve lost the one tax credit their citizen children qualified them for." + caBufferMsg + " This loss is already reflected in your household\u2019s baseline stability score.",
+                secondaryMessage: hasCACredits
+                  ? "These parents still file taxes and contribute to Social Security and Medicare. California recognizes their contributions through CalEITC/YCTC eligibility — but the federal government does not."
+                  : "These parents still file taxes. They still pay into Social Security and Medicare \u2014 approximately $800/year into a Medicare Trust Fund they are legally barred from ever using. But the one credit that recognized their children as Americans has been taken away.",
                 qualityPenalty: 0,
                 forceTradeoff: true,
                 tradeoffAreas: ["taxCreditLoss"],
-                tradeoffHeading: "How does this family cope without " + ctcLostStr + "/year in tax credits?",
-                tradeoffSubtext: "That money covered rent shortfalls, school supplies, clothing, and healthcare costs. Now it\u2019s gone. Choose how they fill the gap.",
+                tradeoffHeading: hasCACredits
+                  ? "How does this family cope with the remaining " + netLossStr + "/year gap?"
+                  : "How does this family cope without " + ctcLostStr + "/year in tax credits?",
+                tradeoffSubtext: hasCACredits
+                  ? "CalEITC and YCTC offset some of the loss, but " + netLossStr + "/year in federal credits is still gone. Choose how they fill the gap."
+                  : "That money covered rent shortfalls, school supplies, clothing, and healthcare costs. Now it\u2019s gone. Choose how they fill the gap.",
               };
             }
+            // Ramirez-specific: ACTC formula (same as custom path on line 503)
+            const ramirezCtcLost = Math.min(numChildren * 1700, Math.max(0, (annualIncome - 2500) * 0.15));
+            const ramirezNetLoss = hasCACredits ? Math.max(0, ramirezCtcLost - caStateCredits) : ramirezCtcLost;
+            const ramirezNetLossStr = "$" + ramirezNetLoss.toLocaleString();
+            const ramirezCAMsg = hasCACredits
+              ? " However, because this household is in California, they are eligible for the CalEITC and Young Child Tax Credit (YCTC) — worth " + caStateCreditsStr + "/year. Unlike federal tax credits, California allows ITIN filers to claim these credits. This partially offsets the federal loss, but a gap of " + ramirezNetLossStr + "/year remains."
+              : household.caState
+                ? " California's CalEITC and Young Child Tax Credit (YCTC) allow ITIN filers to claim state tax credits — a critical difference from federal policy. However, this household's income exceeds the $32,900 CalEITC eligibility limit, so the state credits do not apply here."
+                : "";
             return {
-              type: "excluded", heading: "Your family already lost $5,820 a year",
-              message: "Under the TCJA (2018\u20132025), Carlos and Elena could claim the Child Tax Credit for their three US-citizen children \u2014 about $5,820/year that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, it required the filer to have an SSN, not just the children. Because Carlos and Elena file with ITINs, they were locked out entirely. They were never eligible for the EITC (which has always required filer SSNs), and now they\u2019ve lost the one tax credit their citizen children qualified them for. This loss is already reflected in your household\u2019s baseline stability score.",
-              secondaryMessage: "They still file taxes. They still pay into Social Security and Medicare \u2014 approximately $1,100/year into a Medicare Trust Fund they are legally barred from ever using. But the one credit that recognized their children as Americans has been taken away.",
+              type: "excluded", heading: hasCACredits ? ("Federal credits lost: $" + ramirezCtcLost.toLocaleString() + "/year — California offsets " + caStateCreditsStr) : ("Your family already lost $" + ramirezCtcLost.toLocaleString() + " a year"),
+              message: "Under the TCJA (2018\u20132025), Carlos and Elena could claim the Child Tax Credit for their three US-citizen children \u2014 about $" + ramirezCtcLost.toLocaleString() + "/year in refundable credits (the ACTC: 15% of earnings over $2,500, up to $1,700/child) that helped cover school supplies, clothing, and bills. When the OBBB was signed in July 2025, it required the filer to have an SSN, not just the children. Because Carlos and Elena file with ITINs, they were locked out entirely. They were never eligible for the EITC (which has always required filer SSNs), and now they\u2019ve lost the one tax credit their citizen children qualified them for." + ramirezCAMsg + " This loss is already reflected in your household\u2019s baseline stability score.",
+              secondaryMessage: hasCACredits
+                ? "Carlos and Elena still file taxes and contribute to Social Security and Medicare. California recognizes their contributions through CalEITC/YCTC eligibility — but the federal government does not."
+                : "They still file taxes. They still pay into Social Security and Medicare \u2014 approximately $800/year into a Medicare Trust Fund they are legally barred from ever using. But the one credit that recognized their children as Americans has been taken away.",
               qualityPenalty: 0,
               forceTradeoff: true,
               tradeoffAreas: ["taxCreditLoss"],
-              tradeoffHeading: "How does this family cope without $5,820/year in tax credits?",
-              tradeoffSubtext: "That money covered rent shortfalls, school supplies, clothing, and healthcare costs. Now it\u2019s gone. Choose how they fill the gap.",
+              tradeoffHeading: hasCACredits
+                ? "How does this family cope with the remaining " + ramirezNetLossStr + "/year gap?"
+                : ("How does this family cope without $" + ramirezCtcLost.toLocaleString() + "/year in tax credits?"),
+              tradeoffSubtext: hasCACredits
+                ? "CalEITC and YCTC offset some of the loss, but " + ramirezNetLossStr + "/year in federal credits is still gone. Choose how they fill the gap."
+                : "That money covered rent shortfalls, school supplies, clothing, and healthcare costs. Now it\u2019s gone. Choose how they fill the gap.",
             };
           }
           const credits = household.annualCredits || {};
@@ -513,6 +599,113 @@
         appliesTo: (hh) => (hh.benefits.schoolLunch || 0) > 0 || (hh.benefits.wic || 0) > 0,
       },
     ];
+
+    const CA_POLICY_ROUNDS = [
+      {
+        id: "ca-medicaid-freeze",
+        title: "Medi-Cal Enrollment Freeze & Budget Cuts",
+        chartLabel: "Medi-Cal",
+        programKey: ["medicalExpansion"],
+        isCASpecific: true,
+        programInfo: "Starting January 1, 2026, California froze new Medi-Cal enrollment for undocumented adults. Existing enrollees keep coverage if they complete annual renewal, but starting July 2027, certain adult members without satisfactory immigration status must pay $30/month. Dental benefits for this group end July 2026. As federal Medicaid cuts under the OBBB force California to absorb more costs, the state faces pressure to further restrict eligibility or reduce benefits.",
+        description: "California's Medi-Cal expansion — which extended full-scope coverage regardless of immigration status — faces a two-front squeeze: federal Medicaid cuts shift costs to the state, and California's own budget constraints force enrollment freezes and new cost-sharing requirements. For mixed-status families who gained coverage through the expansion, these changes threaten the healthcare access that set California apart.",
+        cutPercent: 30,
+        context: "California's Medi-Cal program covers over 15 million residents — roughly 1 in 3 Californians. The 2024 expansion to all income-eligible adults regardless of immigration status was a landmark policy. Budget pressure now threatens to erode it.",
+        impactAreas: ["healthcare"],
+        appliesTo: (hh) => hh.caState && (hh.mixedStatus || hh.fullyUndocumented) && ((hh.caBenefits || {}).medicalExpansion || 0) > 0,
+      },
+      {
+        id: "ca-budget-calworks",
+        title: "CalWORKs Under State Budget Pressure",
+        chartLabel: "CalWORKs",
+        programKey: ["tanf"],
+        isCASpecific: true,
+        isBudgetPressure: true,
+        programInfo: "CalWORKs is California's implementation of federal TANF, providing significantly higher cash grants than most states. But as federal TANF funding remains frozen at 1996 levels and California faces its own budget deficits, CalWORKs grants are vulnerable to cuts or freezes. California has historically protected CalWORKs during downturns, but the combination of federal Medicaid cuts, SNAP cost-sharing mandates, and declining state revenues creates unprecedented fiscal pressure.",
+        description: "California's budget deficit, compounded by new federal cost-shifting from OBBB (states must absorb SNAP cost-sharing starting FY2028 and backfill Medicaid coverage losses), puts CalWORKs grants at risk. A 20% cut to CalWORKs would erase years of grant increases and push families deeper into poverty.",
+        cutPercent: 20,
+        context: "CalWORKs serves approximately 700,000 Californians. California's grants are among the highest in the nation but still fall short of covering basic needs in high-cost regions.",
+        impactAreas: ["cashAssistance"],
+        appliesTo: (hh) => hh.caState && ((hh.caBenefits || {}).calworksBoost || 0) > 0,
+      },
+    ];
+
+    // ─── CA Protection Layer ─────────────────────────────────────────────────
+    // Defines how CA state programs buffer federal policy round impacts.
+    // Three tiers:
+    //   "full"      — benefit key(s) fully protected from cut, tradeoff area(s) removed
+    //   "partial"   — cut percentage reduced for specific keys, tradeoff areas may remain
+    //   "narrative" — cut applies normally, but CA buffer callout explains state context
+    // Only active when caState === true on the household.
+
+    const CA_BUFFER_CONFIG = {
+      "child-nutrition": {
+        level: "full",
+        protectedKeys: ["schoolLunch"],
+        removedAreas: ["schoolFood"],
+        callout: "California's Universal Meals Program provides free breakfast and lunch to all TK-12 public school students regardless of income. School meals are fully protected for California families.",
+        note: "WIC benefits are still affected by federal cuts. The Universal Meals Program covers school meals only, not supplemental nutrition for pregnant women, infants, and young children."
+      },
+      "housing-cut": {
+        level: "partial",
+        protectedKeys: [],
+        removedAreas: [],
+        reducedCutKeys: {},
+        callout: "California's CARE/FERA program provides a 32.5% utility discount that partially offsets LIHEAP cuts, but housing assistance cuts still apply in full.",
+        // CARE offset is narrative here — the actual LIHEAP key cut still applies,
+        // but the existing caBenefits.careDiscount provides separate ongoing value
+      },
+      "liheap-only": {
+        level: "partial",
+        protectedKeys: [],
+        removedAreas: [],
+        reducedCutKeys: {},
+        callout: "California's CARE/FERA program provides a 32.5% discount on electricity bills — a separate state-funded program that partially offsets the loss of federal LIHEAP assistance.",
+      },
+      "oaa-nutrition": {
+        level: "partial",
+        protectedKeys: [],
+        removedAreas: [],
+        reducedCutKeys: {},
+        callout: "California's CARE/FERA utility discount partially offsets LIHEAP cuts. Meals on Wheels funding remains vulnerable to federal OAA cuts.",
+      },
+      "tanf-cut": {
+        level: "narrative",
+        callout: null, // handled by existing buffer messages (CalWORKs boost)
+      },
+      "snap-cut": {
+        level: "narrative",
+        callout: null, // handled by existing buffer messages (CFAP for mixed-status)
+      },
+      "snap-immigration": {
+        level: "narrative",
+        callout: null, // handled by existing buffer messages
+      },
+      "medicaid-cap": {
+        level: "narrative",
+        callout: null, // handled by existing Medi-Cal buffer messages
+      },
+      "medicare-medicaid-combined": {
+        level: "narrative",
+        callout: null,
+      },
+      "medicaid-work-req": {
+        level: "narrative",
+        callout: null,
+      },
+      "ssn-tax-credits": {
+        level: "narrative",
+        // CA handling is built into getAwarenessContent — CalEITC/YCTC eligibility for ITIN filers
+        // is surfaced dynamically based on household.caAnnualCredits.caleitc
+        callout: null,
+      },
+    };
+
+    // Helper: get CA buffer config for a round, returns null if no config or CA not active
+    function getCABufferForRound(roundId, household) {
+      if (!household || !household.caState) return null;
+      return CA_BUFFER_CONFIG[roundId] || null;
+    }
 
     const TRADEOFF_OPTIONS = {
       food: [
@@ -583,11 +776,69 @@
       wic: "WIC", liheap: "LIHEAP (Energy Aid)", mealProgram: "Meals on Wheels",
       ctc: "Child Tax Credit", eitc: "Earned Income Tax Credit",
       childMedicaid: "Children\u2019s Medicaid",
+      // CA programs
+      calworks: "CalWORKs (CA Cash Aid)",
+      medicalExpansion: "Medi-Cal Expansion",
+      caleitc: "CalEITC + YCTC",
+      cfap: "CFAP (CA Food Aid)",
+      capi: "CAPI (CA Cash Aid)",
+      careDiscount: "CARE/FERA Utility Discount",
+      caChildcare: "CA Childcare Subsidy",
+    };
+
+    // ─── California State Programs ──────────────────────────────────────────────
+
+    // CA sub-regions with income multipliers reflecting higher CA wages
+    // CA minimum wage: $16.50/hr (2025) vs federal $7.25. BLS data shows CA wages
+    // for service, warehouse, construction, and retail jobs run 15–35% above national
+    // averages, varying by metro area. These multipliers are conservative estimates.
+    const CA_SUBREGIONS = [
+      { id: "ca-bay-area", name: "Bay Area", example: "San Francisco, Oakland, San Jose", housingMult: 1.85, otherMult: 1.16, incomeMult: 1.30, calworksRegion: 1 },
+      { id: "ca-la-metro", name: "Los Angeles Metro", example: "LA County, Orange County", housingMult: 1.65, otherMult: 1.12, incomeMult: 1.22, calworksRegion: 1 },
+      { id: "ca-san-diego", name: "San Diego", example: "San Diego County", housingMult: 1.55, otherMult: 1.10, incomeMult: 1.20, calworksRegion: 1 },
+      { id: "ca-sacramento", name: "Sacramento / Capital Region", example: "Sacramento, Yolo, Placer", housingMult: 1.30, otherMult: 1.05, incomeMult: 1.18, calworksRegion: 1 },
+      { id: "ca-central-valley", name: "Central Valley", example: "Fresno, Bakersfield, Stockton, Modesto", housingMult: 0.85, otherMult: 0.93, incomeMult: 1.10, calworksRegion: 2 },
+      { id: "ca-inland-empire", name: "Inland Empire", example: "Riverside, San Bernardino", housingMult: 1.15, otherMult: 1.02, incomeMult: 1.15, calworksRegion: 2 },
+    ];
+
+    // CalWORKs Maximum Aid Payment (MAP) — effective July 2025 (Oct 2024 base + 5% statutory increase)
+    // Region 1: high-cost counties (Alameda, LA, SF, San Mateo, Santa Clara, etc.)
+    // Region 2: lower-cost counties (Central Valley, Inland Empire, etc.)
+    // Source: CDSS ACL 25-XX (July 2025); base values from CDSS ACL 24-86 (Oct 2024) × 1.05
+    const CALWORKS_MAP = {
+      1: { 2: 807, 3: 1032, 4: 1299, 5: 1570, 6: 1796, 7: 2001, 8: 2206 },
+      2: { 2: 770, 3: 983, 4: 1240, 5: 1494, 6: 1712, 7: 1909, 8: 2105 },
+    };
+
+    // CalEITC maximum credits by qualifying children (2025 tax year)
+    // Income limit: $32,900. Phase-out begins at ~$27,425
+    // CRITICAL: ITIN filers ARE eligible
+    const CALEITC_MAX = { 0: 302, 1: 1900, 2: 3100, 3: 3756 };
+
+    // Young Child Tax Credit: $1,189 per return if child under 6 and CalEITC-eligible
+    const YCTC_MAX = 1189;
+
+    // CARE utility discount: 32.5% off electric bills
+    // Income limits (2025-2026): varies by HH size
+    const CARE_INCOME_LIMITS = { 1: 42300, 2: 42300, 3: 53300, 4: 64300, 5: 75300, 6: 86300, 7: 97300, 8: 108300 };
+
+    // CAPI: state SSI equivalent for non-citizens. Max $1,207/month individual, $2,058/couple (2025)
+    const CAPI_INDIVIDUAL = 1207;
+    const CAPI_COUPLE = 2058;
+
+    const CA_BENEFIT_NAMES = {
+      calworks: "CalWORKs (CA Cash Aid)",
+      medicalExpansion: "Medi-Cal (Full-Scope Expansion)",
+      caleitc: "CalEITC + YCTC (CA Tax Credits)",
+      cfap: "CFAP (CA Food Assistance)",
+      capi: "CAPI (CA Cash for Immigrants)",
+      careDiscount: "CARE/FERA (Utility Discount)",
+      caChildcare: "CA Childcare Subsidy",
     };
 
     // ─── Helpers ──────────────────────────────────────────────────────────────
 
-    const SERVICE_COVERAGE_KEYS = ["childMedicaid", "medicaid", "medicare", "chip", "schoolLunch", "wic", "mealProgram"];
+    const SERVICE_COVERAGE_KEYS = ["childMedicaid", "medicaid", "medicare", "chip", "schoolLunch", "wic", "mealProgram", "medicalExpansion"];
     function getBenefitTotal(b) { return Object.values(b).reduce((s, v) => s + v, 0); }
     function getCashBenefitTotal(b) { return Object.entries(b).filter(([k]) => !SERVICE_COVERAGE_KEYS.includes(k)).reduce((s, [, v]) => s + v, 0); }
     function getExpenseTotal(e) { return Object.values(e).reduce((s, v) => s + v, 0); }
@@ -765,11 +1016,303 @@
       result.eitc = { eligible: eitcEligible, default: eitcBenefit, min: 0, max: eitcMaxForFamily, note: eitcEligible ? "" : mixedStatus ? "ITIN filers are ineligible for EITC" : children === 0 ? "Childless EITC is very small; requires very low income" : annualIncome > eitcLimit ? "Annual income exceeds EITC limit (" + formatMoney(eitcLimit) + ")" : "Not eligible", isAnnual: true };
       result.ctc = { eligible: ctcEligible, default: ctcAnnual, min: 0, max: children * 1700, note: ctcEligible ? "" : mixedStatus ? "ITIN filers are ineligible under OBBB" : children === 0 ? "Requires children" : ctcAfterPhaseout <= 0 ? "Income exceeds CTC phaseout threshold (" + formatMoney(ctcPhaseoutThreshold) + ")" : "Requires children and SSN", isAnnual: true };
 
+      // Fully undocumented override: zero out all programs that require qualified immigration status
+      // Only WIC and school lunch don't verify status at the federal level
+      const isFullyUndocumented = opts.fullyUndocumented || false;
+      if (isFullyUndocumented) {
+        const undocNote = "Requires qualified immigration status";
+        if (result.snap) { result.snap.eligible = false; result.snap.default = 0; result.snap.note = undocNote; }
+        if (result.medicaid) { result.medicaid.eligible = false; result.medicaid.default = 0; result.medicaid.note = "Undocumented residents are ineligible for federal Medicaid"; }
+        if (result.childMedicaid) { result.childMedicaid.eligible = false; result.childMedicaid.default = 0; result.childMedicaid.note = "Undocumented children are ineligible for federal Medicaid (Medi-Cal covers them in CA)"; }
+        if (result.chip) { result.chip.eligible = false; result.chip.default = 0; result.chip.note = undocNote; }
+        if (result.tanf) { result.tanf.eligible = false; result.tanf.default = 0; result.tanf.note = undocNote; }
+        if (result.housing) { result.housing.eligible = false; result.housing.default = 0; result.housing.note = undocNote; }
+        if (result.liheap) { result.liheap.eligible = false; result.liheap.default = 0; result.liheap.note = undocNote; }
+        if (result.eitc) { result.eitc.eligible = false; result.eitc.default = 0; result.eitc.note = "Requires SSN for filer"; }
+        if (result.ctc) { result.ctc.eligible = false; result.ctc.default = 0; result.ctc.note = "Requires SSN for child and filer"; }
+        if (result.medicare) { result.medicare.eligible = false; result.medicare.default = 0; result.medicare.note = undocNote; }
+        if (result.mealProgram) { result.mealProgram.eligible = false; result.mealProgram.default = 0; result.mealProgram.note = undocNote; }
+        // WIC and schoolLunch remain — they don't verify immigration status
+      }
+
       return result;
     }
 
-    function estimateExpenses(adults, children, hasChildcare) {
+    function calculateCAEligibility(income, adults, children, childrenAges, mixedStatus, adultsOver65, options, federalResult) {
+      const opts = options || {};
+      const fullyUndocumented = opts.fullyUndocumented || false;
+      const members = adults + children;
+      const annualIncome = income * 12;
+      const baseFPL = calculateFPL(members);
+      const underFiveChildren = (childrenAges || []).filter(a => a < 5).length;
+      const isElderly = (adultsOver65 || 0) > 0;
+      const calworksRegion = opts.calworksRegion || 1;
+
+      const result = {};
+
+      // CalWORKs: CA's TANF — higher grants, broader eligibility
+      // Eligibility: families with children, income below MBSAC (~75-80% FPL for CA, more generous than federal 50%)
+      // CA does not exclude based on immigration status for children; parents need legal status or meet exemptions
+      const calworksLimit = baseFPL * 0.75 / 12; // More generous than federal TANF's ~50% FPL
+      const calworksMap = CALWORKS_MAP[calworksRegion] || CALWORKS_MAP[1];
+      const calworksAmount = calworksMap[Math.min(members, 8)] || calworksMap[8] || 2005;
+      // CalWORKs is for families with children; adults need to be citizens/qualified immigrants
+      // Simplification: excludes child-only CalWORKs grants for mixed-status families (Section 11008 income attribution). See Sources & Methodology.
+      const calworksEligible = children > 0 && income <= calworksLimit && !mixedStatus;
+      // If eligible, CalWORKs REPLACES federal TANF (it's the state's implementation, not additive)
+      // But CalWORKs is higher than federal TANF, so we show the DIFFERENCE as the CA add-on
+      const federalTanf = (federalResult && federalResult.tanf) ? federalResult.tanf.default : 0;
+      const calworksAddon = calworksEligible ? Math.max(0, calworksAmount - federalTanf) : 0;
+      result.calworks = {
+        eligible: calworksEligible,
+        default: calworksAddon,
+        fullAmount: calworksAmount,
+        replacesProgram: "tanf",
+        note: calworksEligible ? "CalWORKs provides " + formatMoney(calworksAmount) + "/mo total (federal TANF + state supplement)" : mixedStatus ? "Requires qualified immigration status for parents" : children === 0 ? "Requires children" : "Income exceeds CalWORKs limit",
+        isAnnual: false,
+      };
+
+      // Medi-Cal full-scope expansion: as of Jan 2024, ALL income-eligible Californians qualify
+      // regardless of immigration status. This is HUGE for mixed-status families.
+      // Income limit: 138% FPL for adults, 266% FPL for children
+      // NOTE: Starting Jan 2026, new enrollment freeze for undocumented adults (but existing enrollees keep coverage)
+      const medicalAdultLimit = baseFPL * 1.38 / 12;
+      const medicalChildLimit = baseFPL * 2.66 / 12;
+      // In CA, even undocumented adults can get Medi-Cal (unlike federal Medicaid)
+      const medicalAdultEligible = income <= medicalAdultLimit; // No immigration status check!
+      const medicalChildEligible = children > 0 && income <= medicalChildLimit;
+      const medicalEligible = medicalAdultEligible || medicalChildEligible;
+      // Calculate the ADDITIONAL coverage CA provides beyond federal Medicaid
+      const federalMedicaidValue = (federalResult && federalResult.medicaid) ? federalResult.medicaid.default : 0;
+      const fullMedicalValue = (medicalAdultEligible ? adults * 450 : 0) + (medicalChildEligible ? children * 300 : 0);
+      const medicalAddon = Math.max(0, fullMedicalValue - federalMedicaidValue);
+      // For fully undocumented families, Medi-Cal IS their only health coverage (no federal Medicaid at all)
+      // For mixed-status, it's the addon for parents excluded from federal Medicaid
+      // For documented families, federal Medicaid already covers them
+      const medicalIsOnlyCoverage = fullyUndocumented;
+      const medicalDisplayValue = medicalIsOnlyCoverage ? fullMedicalValue : medicalAddon;
+      result.medicalExpansion = {
+        eligible: medicalDisplayValue > 0 && (mixedStatus || fullyUndocumented),
+        default: medicalDisplayValue,
+        note: fullyUndocumented
+          ? "Medi-Cal is this family's ONLY health coverage. California expanded full-scope Medi-Cal to all income-eligible adults regardless of immigration status in January 2024. New enrollment for undocumented adults (19+) was frozen January 2026. Children under 19 can still enroll."
+          : mixedStatus
+            ? "Medi-Cal covers ALL income-eligible residents regardless of immigration status — parents who are excluded from federal Medicaid can get full coverage in California"
+            : "Federal Medicaid already covers this household; Medi-Cal provides equivalent coverage",
+        isAnnual: false,
+      };
+
+      // CalEITC + YCTC: state tax credits that stack on federal EITC
+      // CRITICAL: ITIN filers ARE eligible — this is the key differentiator for mixed-status families
+      const caleitcEligible = annualIncome > 0 && annualIncome <= 32900;
+      const caleitcMax = CALEITC_MAX[Math.min(children, 3)] || 3756;
+      // Simple phaseout model: full credit up to $27,425, phases out linearly to $32,900
+      let caleitcAmount = 0;
+      if (caleitcEligible) {
+        if (annualIncome <= 27425) {
+          caleitcAmount = caleitcMax;
+        } else {
+          const phaseoutRange = 32900 - 27425;
+          const reduction = ((annualIncome - 27425) / phaseoutRange) * caleitcMax;
+          caleitcAmount = Math.max(0, Math.round(caleitcMax - reduction));
+        }
+      }
+      // YCTC: additional $1,189 if child under 6 and CalEITC-eligible
+      // Note: underFiveChildren uses age < 5 (for WIC), but YCTC covers children under 6
+      const underSixChildren = (childrenAges || []).filter(a => a < 6).length;
+      const yctcEligible = caleitcEligible && underSixChildren > 0;
+      const yctcAmount = yctcEligible ? YCTC_MAX : 0;
+      const totalCalCredits = caleitcAmount + yctcAmount;
+      result.caleitc = {
+        eligible: caleitcEligible && totalCalCredits > 0,
+        default: totalCalCredits,
+        caleitcPortion: caleitcAmount,
+        yctcPortion: yctcAmount,
+        note: caleitcEligible ? (mixedStatus ? "ITIN filers ARE eligible for CalEITC and YCTC — unlike federal EITC" : "California tax credits that stack on top of federal EITC") : annualIncome > 32900 ? "Annual income exceeds $32,900 CalEITC limit" : "Requires earned income",
+        isAnnual: true,
+      };
+
+      // CFAP: state-funded food assistance for qualified immigrants ineligible for federal SNAP
+      // Covers: LPRs < 5 years, parolees, conditional entrants, trafficking victims, U-visa holders
+      // Does NOT cover undocumented immigrants (except age 55+ starting Oct 2027)
+      // Benefits equal CalFresh/SNAP amounts
+      // For mixed-status: the undocumented parents do NOT qualify for CFAP
+      // But lawfully present immigrants who are excluded from SNAP can get CFAP
+      const cfapEligible = false; // Simplified: most mixed-status families with undocumented parents don't qualify
+      // In a more nuanced model, we'd check specific immigration subcategories
+      result.cfap = {
+        eligible: cfapEligible,
+        default: 0,
+        note: "CFAP covers lawfully present immigrants ineligible for federal SNAP (e.g., LPRs under 5 years). It does not cover undocumented immigrants except those 55+ (starting Oct 2027).",
+        isAnnual: false,
+      };
+
+      // CAPI: state SSI equivalent for aged/blind/disabled non-citizens ineligible for SSI due to immigration status
+      const capiEligible = isElderly && mixedStatus && income <= (baseFPL * 0.75 / 12);
+      const capiAmount = capiEligible ? (adults > 1 && (adultsOver65 || 0) > 1 ? CAPI_COUPLE : CAPI_INDIVIDUAL) : 0;
+      result.capi = {
+        eligible: capiEligible,
+        default: capiAmount,
+        note: capiEligible ? "State-funded cash aid for aged/disabled non-citizens ineligible for federal SSI" : !isElderly ? "Requires adults 65+ or disabled" : !mixedStatus ? "For non-citizens ineligible for federal SSI" : "Income too high",
+        isAnnual: false,
+      };
+
+      // CARE/FERA: utility rate discounts
+      // CARE: 32.5% off electric for income ≤ limits; FERA: 18% for slightly higher
+      const careLimit = CARE_INCOME_LIMITS[Math.min(members, 8)] || 108300;
+      const careEligible = annualIncome <= careLimit;
+      // Estimate monthly savings: average CA electric bill ~$150-200, so 32.5% = ~$50-65
+      const careSavings = careEligible ? 55 : 0; // Conservative estimate of monthly savings
+      result.careDiscount = {
+        eligible: careEligible,
+        default: careSavings,
+        note: careEligible ? "32.5% discount on electricity bills through CARE program" : "Household income exceeds CARE limits",
+        isAnnual: false,
+      };
+
+      // CA childcare subsidies: beyond federal CCDF
+      // Families up to 85% SMI (~$70K for family of 4); fees eliminated below 75% SMI
+      // Estimate additional subsidy value
+      const hasYoungChildren = underFiveChildren > 0 || (childrenAges || []).some(a => a < 13);
+      // CA childcare subsidies require qualified immigration status for parents
+      const caChildcareEligible = hasYoungChildren && annualIncome <= 70000 && !fullyUndocumented; // Approximate 85% SMI for family of 4
+      const caChildcareSavings = caChildcareEligible ? (underFiveChildren > 0 ? 350 : 200) : 0;
+      result.caChildcare = {
+        eligible: caChildcareEligible && caChildcareSavings > 0,
+        default: caChildcareSavings,
+        note: fullyUndocumented ? "CA childcare subsidies require qualified immigration status for parents" : caChildcareEligible ? "CA subsidized childcare — families below 75% state median income pay no fees" : "Income exceeds CA childcare subsidy threshold",
+        isAnnual: false,
+      };
+
+      return result;
+    }
+
+    function applyCALayer(household, region, opts) {
+      // Enrollment status: "all" = whole family, "children-only" = kids but not parents, "none" = nobody
+      // null means unanswered — default to "all" (assume enrolled for presets that don't ask)
+      const medicalEnrollment = (opts && opts.medicalEnrolledPreFreeze != null)
+        ? opts.medicalEnrolledPreFreeze
+        : "all";
+      // Determine household composition from preset data
+      const hhComposition = {
+        "single-mom": { adults: 1, children: 2, childrenAges: [4, 9], adultsOver65: 0 },
+        "elderly-couple": { adults: 2, children: 0, childrenAges: [], adultsOver65: 2 },
+        "working-family": { adults: 2, children: 3, childrenAges: [2, 7, 12], adultsOver65: 0 },
+        "mixed-status": { adults: 2, children: 3, childrenAges: [3, 8, 13], adultsOver65: 0 },
+        "undocumented": { adults: 2, children: 2, childrenAges: [4, 10], adultsOver65: 0 },
+        "middle-class": { adults: 2, children: 2, childrenAges: [10, 7], adultsOver65: 0 },
+      };
+
+      const comp = household.isCustom
+        ? { adults: household.adults, children: household.children, childrenAges: (household.childrenAges || []).map(a => a === "under5" ? 3 : a === "5-12" ? 9 : 15), adultsOver65: household.adultsOver65 || 0 }
+        : (hhComposition[household.id] || { adults: 1, children: 0, childrenAges: [], adultsOver65: 0 });
+
+      const calworksRegion = (region && region.calworksRegion) || 1;
+      const incomeMult = (region && region.incomeMult) || 1.0;
+
+      // Adjust income for CA wage levels (preset households only — custom users set their own)
+      // Undocumented and mixed-status workers get a PARTIAL income multiplier:
+      // market forces (cost of living, competition for labor) push wages up even in cash-pay
+      // arrangements, but wage theft, lack of labor protections, and exploitation mean they
+      // capture only ~50% of the regional wage premium that documented workers receive.
+      // This ensures ~900k Bay Area CalEITC-qualifying households are represented.
+      const isUndocWorker = household.mixedStatus || household.fullyUndocumented;
+      const effectiveMult = household.isCustom ? 1.0
+        : isUndocWorker ? (1.0 + (incomeMult - 1.0) * 0.5)  // 50% of premium
+        : incomeMult;
+      const adjustedIncome = Math.round(household.monthlyIncome * effectiveMult);
+
+      // Build a minimal federal result object for the CA function
+      const federalResult = {
+        tanf: { default: household.benefits.tanf || 0 },
+        medicaid: { default: household.benefits.medicaid || 0 },
+      };
+
+      const caElig = calculateCAEligibility(
+        adjustedIncome,
+        comp.adults,
+        comp.children,
+        comp.childrenAges,
+        household.mixedStatus,
+        comp.adultsOver65,
+        { calworksRegion, incomeSource: household.incomeSource || "employment", fullyUndocumented: household.fullyUndocumented || false },
+        federalResult
+      );
+
+      // Build the enhanced household with CA-adjusted income
+      const enhanced = { ...household, caState: true };
+      if (!household.isCustom && effectiveMult !== 1.0) {
+        enhanced.monthlyIncome = adjustedIncome;
+        enhanced.originalIncome = household.monthlyIncome;
+        enhanced.caIncomeMult = effectiveMult;
+      }
+      const caBenefits = {};
+      const caAnnualCredits = {};
+
+      // Gate Medi-Cal based on enrollment status
+      // "all" = full family coverage, "children-only" = kids covered but not adults, "none" = nobody enrolled
+      if (medicalEnrollment !== "all" && (household.mixedStatus || household.fullyUndocumented)) {
+        if (caElig.medicalExpansion && caElig.medicalExpansion.eligible) {
+          if (medicalEnrollment === "children-only" && comp.children > 0) {
+            const childrenOnlyValue = comp.children * 300;
+            caElig.medicalExpansion = { ...caElig.medicalExpansion, default: childrenOnlyValue, note: "Only the children are enrolled in Medi-Cal. The parents never applied — the enrollment freeze means they can no longer get full-scope coverage. They qualify for restricted-scope (emergency) Medi-Cal only." };
+          } else {
+            // "none" — nobody enrolled, or "children-only" with no children
+            caElig.medicalExpansion = { ...caElig.medicalExpansion, eligible: false, default: 0, note: "No one in this family enrolled in Medi-Cal. The adults can no longer apply for full-scope coverage after the January 2026 freeze. They qualify for restricted-scope (emergency) Medi-Cal only — ER visits and emergency dental, initiated by hospital billing." };
+          }
+        }
+      }
+
+      Object.entries(caElig).forEach(([key, val]) => {
+        if (val.eligible && val.default > 0) {
+          if (val.isAnnual) {
+            caAnnualCredits[key] = val.default;
+          } else {
+            caBenefits[key] = val.default;
+          }
+        }
+      });
+
+      // Merge monthly CA benefits into household benefits
+      enhanced.benefits = { ...household.benefits, ...caBenefits };
+      enhanced.caBenefits = caBenefits;
+
+      // Merge annual credits
+      enhanced.annualCredits = { ...household.annualCredits, ...caAnnualCredits };
+      enhanced.caAnnualCredits = caAnnualCredits;
+
+      // CalWORKs replaces TANF — use the higher CalWORKs amount
+      if (caElig.calworks && caElig.calworks.eligible) {
+        enhanced.benefits.tanf = caElig.calworks.fullAmount; // Use full CalWORKs amount
+        delete enhanced.benefits.calworks; // Don't double-count — CalWORKs IS the TANF payment in CA
+        enhanced.caBenefits.calworksBoost = caElig.calworks.default; // Track the CA boost amount
+      }
+
+      // Store the CA eligibility details and enrollment status for the UI
+      enhanced.caEligibility = caElig;
+      enhanced.medicalEnrollment = medicalEnrollment;
+
+      return enhanced;
+    }
+
+    function estimateExpenses(adults, children, hasChildcare, fullyUndocumented) {
       const childrenUnderFive = hasChildcare ? Math.min(children, 2) : 0; // Cap at 2 for childcare calculation
+      // Fully undocumented families compress spending radically — shared rooms, no car,
+      // no formal childcare, community-sourced clothing, Medi-Cal covers healthcare
+      if (fullyUndocumented) {
+        return {
+          housing: Math.max(650, 750 + (adults + children - 3) * 100), // renting rooms, not apartments
+          food: adults * 180 + children * 120, // cooking from scratch, employer meals, food banks
+          healthcare: 0, // Medi-Cal covers everything
+          transportation: 100 + Math.max(0, adults - 1) * 30, // buses, bikes — no car
+          childcare: 0, // informal networks, no formal childcare access
+          utilities: 0, // typically included in room rent
+          clothing: adults * 10 + children * 10, // donations, hand-me-downs, thrift
+          phone: 40, // prepaid, shared plans
+          remittances: 150, // obligation to family abroad
+          other: 40,
+        };
+      }
       return {
         housing: Math.max(750, 1150 + (adults + children - 3) * 200),
         food: adults * 250 + children * 180,
@@ -783,7 +1326,7 @@
       };
     }
 
-    function calculateBaselineQuality(income, cashBenefits, expenses, mixedStatus, isElderly, incomeSource) {
+    function calculateBaselineQuality(income, cashBenefits, expenses, mixedStatus, isElderly, incomeSource, fullyUndocumented) {
       const totalCash = income + cashBenefits;
       const expenseTotal = typeof expenses === 'number' ? expenses : getExpenseTotal(expenses);
       const ratio = expenseTotal > 0 ? totalCash / expenseTotal : 0;
@@ -800,7 +1343,7 @@
       else if (ratio >= 0.7) base = Math.round(30 + (ratio - 0.7) * 53.3);   // 30–38
       else base = Math.max(20, Math.round(20 + ratio * 14.3));                // 20–30
 
-      if (mixedStatus) base = Math.max(20, base - 8);
+      if (mixedStatus) base = Math.max(20, base - (fullyUndocumented ? 12 : 8));
       // Full elderly penalty for fixed income, smaller for mixed, none for employment
       if (isElderly) {
         const elderlyPenalty = incomeSource === "retirement" ? 3 : incomeSource === "mixed" ? 1 : 0;
@@ -810,7 +1353,7 @@
     }
 
     function generateCustomStory(config) {
-      const { name, adults, children, income, mixedStatus, childrenAges, adultsOver65, incomeSource, hasDisabledChild } = config;
+      const { name, adults, children, income, mixedStatus, fullyUndocumented, childrenAges, adultsOver65, incomeSource, hasDisabledChild } = config;
       const isElderly = (adultsOver65 || 0) > 0;
       const isFixedIncome = isElderly && incomeSource === "retirement";
       const isMixedIncome = isElderly && incomeSource === "mixed";
@@ -905,7 +1448,9 @@
       }
 
       // Build status note
-      const statusNote = mixedStatus
+      const statusNote = fullyUndocumented
+        ? `Everyone in ${name} is undocumented. They file taxes with ITINs but have no SSNs. This means the entire family is excluded from most federal safety net programs — SNAP, Medicaid, TANF, housing assistance, and all federal tax credits.`
+        : mixedStatus
         ? `${name} files taxes with ITINs because the ${isSingle ? "adult doesn't have" : "parents don't have"} SSNs.${children > 0 ? " Their US-citizen children have SSNs." : ""} This status affects eligibility for several federal programs and tax credits.`
         : undefined;
 
@@ -968,10 +1513,17 @@
         if (r.id === "aca-premium-cliff" && household.lostSubsidy) {
           dollarImpact = `Estimated impact: +${formatMoney(household.lostSubsidy)}/month in premiums (${formatMoney(household.lostSubsidy * 12)}/year)`;
         } else if (r.id === "ssn-tax-credits" && household.mixedStatus) {
-          const ctcLostAmt = household.isCustom ? (household.children || 0) * 2200 : 5820;
+          const ctcLostAmt = household.isCustom ? Math.min((household.children || 0) * 1700, Math.max(0, (household.monthlyIncome * 12 - 2500) * 0.15)) : 3585;
           dollarImpact = "Estimated impact: \u2212" + formatMoney(ctcLostAmt) + "/year in lost Child Tax Credits";
-        } else if (r.id === "snap-immigration" && household.mixedStatus) {
-          dollarImpact = "Impact: Chilling effect reduces participation among eligible family members";
+        } else if (r.id === "ssn-tax-credits" && household.fullyUndocumented) {
+          const caStateCredits = (household.caAnnualCredits && household.caAnnualCredits.caleitc) || 0;
+          dollarImpact = caStateCredits > 0
+            ? "Never eligible for federal credits. CA CalEITC/YCTC: +" + formatMoney(caStateCredits) + "/year"
+            : "Never eligible for any federal tax credits";
+        } else if (r.id === "snap-immigration" && (household.mixedStatus || household.fullyUndocumented)) {
+          dollarImpact = household.fullyUndocumented
+            ? "Impact: Never eligible for SNAP. Chilling effect threatens WIC participation."
+            : "Impact: Chilling effect reduces participation among eligible family members";
         }
         return { title: r.title, heading: aw.heading, type: aw.type, dollarImpact, description: r.description, qualityPenalty: aw.qualityPenalty || 0 };
       }).filter(Boolean);
@@ -1028,7 +1580,7 @@ ${tradeoffRows ? `<h2>Tradeoffs This Family Was Forced to Make</h2><table><thead
 ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><ul style="padding-left:20px;font-size:12.5px;">${skippedList}</ul>` : ''}
 <div class="footer">
   <strong>The Safety Net Simulator</strong> \u2014 mBOLDen Change &middot; <a href="https://www.mboldenchange.org/" style="color:#0091AD;">mboldenchange.org</a><br/>
-  Data current as of February 2026. Sources: CBO, USDA-FNS, CMS, IRS, KFF, ITEP. Cut percentages are modeled estimates; actual impacts vary by state. Stability scores are illustrative, not predictive.<br/>
+  Data current as of March 2026. Sources: CBO, USDA-FNS, CMS, IRS, KFF, ITEP. Cut percentages are modeled estimates; actual impacts vary by state. Stability scores are illustrative, not predictive.<br/>
   <em>For use in advocacy and education. This is not a predictive tool or benefits calculator.</em>
 </div>
 </body></html>`;
@@ -1183,6 +1735,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         childrenAges: [],
         income: 2000,
         mixedStatus: false,
+        fullyUndocumented: false,
         adultsOver65: 0,
         incomeSource: "employment",
         hasDisabledChild: false,
@@ -1213,7 +1766,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         setConfig({ ...config, childrenAges: newAges });
       };
 
-      const rawExpenses = estimateExpenses(config.adults, config.children, config.children > 0);
+      const rawExpenses = estimateExpenses(config.adults, config.children, config.children > 0, config.fullyUndocumented);
       const preRegionExpenses = config.customExpenses || (config.region ? adjustExpenses(rawExpenses, config.region) : rawExpenses);
       const eligibility = calculateEligibility(
         config.income,
@@ -1227,6 +1780,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
           childcareCost: preRegionExpenses.childcare || 0,
           housingCost: preRegionExpenses.housing || 0,
           medicalCost: (preRegionExpenses.healthcare || 0) + (preRegionExpenses.medications || 0),
+          fullyUndocumented: config.fullyUndocumented || false,
         }
       );
 
@@ -1245,7 +1799,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         if (!SERVICE_COVERAGE_KEYS.includes(key) && !val.isAnnual && val.eligible) return sum + val.default;
         return sum;
       }, 0);
-      const baselineQuality = calculateBaselineQuality(config.income, cashBenefits, baseExpenses, config.mixedStatus, (config.adultsOver65 || 0) > 0, config.incomeSource);
+      const baselineQuality = calculateBaselineQuality(config.income, cashBenefits, baseExpenses, config.mixedStatus || config.fullyUndocumented, (config.adultsOver65 || 0) > 0, config.incomeSource, config.fullyUndocumented);
 
       const totalEligibleCount = Object.values(eligibility).filter(v => v.eligible && !v.isAnnual).length;
       const totalBenefitValue = Object.entries(eligibility).reduce((sum, [key, val]) => {
@@ -1274,6 +1828,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         children: config.children,
         income: config.income,
         mixedStatus: config.mixedStatus,
+        fullyUndocumented: config.fullyUndocumented,
         childrenAges: config.childrenAges,
         adultsOver65: config.adultsOver65,
         incomeSource: config.incomeSource,
@@ -1295,14 +1850,15 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
           monthlyIncome: config.income,
           members: config.adults + config.children,
           mixedStatus: config.mixedStatus,
+          fullyUndocumented: config.fullyUndocumented || false,
           baselineQuality,
           baselineNote: storyData.baselineNote,
           benefits: finalBenefits,
           annualCredits: {
             ctc: eligibility.ctc.eligible ? eligibility.ctc.default : 0,
             eitc: eligibility.eitc.eligible ? eligibility.eitc.default : 0,
-            ctcNote: config.mixedStatus ? "ITIN filers cannot claim CTC under OBBB changes" : "Child Tax Credit refundable portion",
-            eitcNote: config.mixedStatus ? "ITIN filers are not eligible for EITC" : "Earned Income Tax Credit",
+            ctcNote: (config.mixedStatus || config.fullyUndocumented) ? "ITIN filers cannot claim CTC under current law" : "Child Tax Credit refundable portion",
+            eitcNote: (config.mixedStatus || config.fullyUndocumented) ? "ITIN filers are not eligible for EITC" : "Earned Income Tax Credit",
           },
           expenses: baseExpenses,
           customRegion: config.region,
@@ -1312,6 +1868,9 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
           isCustom: true,
           adults: config.adults,
           children: config.children,
+          childrenAges: config.childrenAges,
+          adultsOver65: config.adultsOver65 || 0,
+          incomeSource: config.incomeSource || "employment",
         };
         onComplete(household);
       };
@@ -1481,17 +2040,26 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                 <label className="block text-sm font-medium text-gray-700 mb-3">Immigration & tax filing status</label>
                 <div className="space-y-3">
                   {[
-                    { value: false, label: "SSN (US Citizen / Legal Permanent Resident)", desc: "All family members have SSNs or are citizens" },
-                    { value: true, label: "ITIN (Mixed-Status Family)", desc: "Parents file with ITINs; children are US citizens" },
-                  ].map((opt) => (
-                    <label key={opt.value} className={`flex items-start gap-3 p-3 border rounded-lg cursor-pointer transition-all ${
-                      config.mixedStatus === opt.value ? "border-teal-500 bg-teal-50" : "border-gray-300 bg-white hover:bg-gray-50"
+                    { id: "citizen", label: "SSN (US Citizen / Legal Permanent Resident)", desc: "All family members have SSNs or are citizens" },
+                    { id: "mixed", label: "ITIN (Mixed-Status Family)", desc: "Parents file with ITINs; children are US citizens with SSNs" },
+                    { id: "undocumented", label: "ITIN (Fully Undocumented)", desc: "All family members are undocumented. Parents file with ITINs. No SSNs in household." },
+                  ].map((opt) => {
+                    const isSelected = opt.id === "citizen" ? (!config.mixedStatus && !config.fullyUndocumented)
+                      : opt.id === "mixed" ? config.mixedStatus
+                      : config.fullyUndocumented;
+                    return (
+                    <label key={opt.id} className={`flex items-start gap-3 p-3 border rounded-lg cursor-pointer transition-all ${
+                      isSelected ? "border-teal-500 bg-teal-50" : "border-gray-300 bg-white hover:bg-gray-50"
                     }`}>
                       <input
                         type="radio"
                         name="status"
-                        checked={config.mixedStatus === opt.value}
-                        onChange={() => handleInputChange("mixedStatus", opt.value)}
+                        checked={isSelected}
+                        onChange={() => {
+                          if (opt.id === "citizen") setConfig(c => ({ ...c, mixedStatus: false, fullyUndocumented: false }));
+                          else if (opt.id === "mixed") setConfig(c => ({ ...c, mixedStatus: true, fullyUndocumented: false }));
+                          else setConfig(c => ({ ...c, mixedStatus: false, fullyUndocumented: true }));
+                        }}
                         className="mt-1"
                       />
                       <div>
@@ -1499,7 +2067,8 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                         <div className="text-xs text-gray-600">{opt.desc}</div>
                       </div>
                     </label>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -1531,7 +2100,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                   </div>
                 );
               })}
-              {(eligibility.ctc.eligible || eligibility.eitc.eligible || config.mixedStatus || config.children > 0) && (
+              {(eligibility.ctc.eligible || eligibility.eitc.eligible || config.mixedStatus || config.fullyUndocumented || config.children > 0) && (
                 <div className={`p-4 border-2 rounded-lg mt-6 ${(eligibility.ctc.eligible || eligibility.eitc.eligible) ? "border-blue-300 bg-blue-50" : "border-gray-200 bg-gray-50"}`}>
                   <h4 className="font-medium text-gray-900 mb-2">Annual Tax Credits</h4>
                   <div className="space-y-1">
@@ -1553,8 +2122,8 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                     )}
                   </div>
                   <p className="text-xs text-gray-500 mt-2">Tax credits are annual — paid once at tax time, not monthly.</p>
-                  {config.mixedStatus && (
-                    <p className="text-xs text-red-600 mt-1">ITIN filers are not eligible for these credits under current law.</p>
+                  {(config.mixedStatus || config.fullyUndocumented) && (
+                    <p className="text-xs text-red-600 mt-1">ITIN filers are not eligible for federal tax credits under current law.</p>
                   )}
                 </div>
               )}
@@ -1680,7 +2249,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Status:</span>
-                    <span className="font-semibold">{config.mixedStatus ? "Mixed-status (ITIN)" : "US Citizen/LPR"}</span>
+                    <span className="font-semibold">{config.fullyUndocumented ? "Fully Undocumented (ITIN)" : config.mixedStatus ? "Mixed-status (ITIN)" : "US Citizen/LPR"}</span>
                   </div>
                   <hr className="my-2" />
                   <div className="flex justify-between">
@@ -1901,18 +2470,140 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
       );
     }
 
-    function RegionSelect({ household, onSelect }) {
+    function RegionSelect({ household, onSelect, caState, onCaToggle, medicalEnrolledPreFreeze, onMedicalEnrollment }) {
+      const regions = caState ? CA_SUBREGIONS : REGIONS;
       return (
         <div className="max-w-3xl mx-auto py-6">
           <h2 className="text-2xl font-bold mb-2" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>Where does this family live?</h2>
           <p className="text-gray-500 mb-1">Cost of living changes the math. Housing is the biggest variable.</p>
-          <p className="text-xs text-gray-400 mb-6">Multipliers based on 2023 BEA Regional Price Parities and FY2025 HUD Fair Market Rent data.</p>
+          <p className="text-xs text-gray-400 mb-1">Multipliers based on 2023 BEA Regional Price Parities and FY2025 HUD Fair Market Rent data.</p>
+          {!caState && <p className="text-xs text-gray-400 mb-4 italic">Income is held constant across regions. Federal benefits don't adjust for local wages or cost of living — that's part of the problem.</p>}
+          {caState && <p className="text-xs text-gray-400 mb-4 italic">California wages and expenses are both adjusted by sub-region. Documented workers receive the full regional wage premium; undocumented/mixed-status workers receive a partial premium (50%) reflecting market-driven wage increases offset by wage theft and cash-pay arrangements.</p>}
+
+          {/* California Toggle */}
+          <div className="mb-6 p-4 rounded-xl border-2 transition-all" style={{
+            borderColor: caState ? '#0091AD' : 'var(--card-border)',
+            backgroundColor: caState ? '#F0FDFA' : 'var(--card-bg)',
+          }}>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">🏛️</span>
+                <div>
+                  <h3 className="font-bold text-sm" style={{fontFamily: "'Archivo Narrow', sans-serif", color: '#1a1a1a'}}>
+                    Is this household in California?
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    {caState
+                      ? "California programs layered on top of federal benefits. Select a CA sub-region below."
+                      : "Toggle on to add California state programs (CalWORKs, Medi-Cal expansion, CalEITC, CARE/FERA, and more)."}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => { onCaToggle(!caState); if (caState) onMedicalEnrollment(null); }}
+                className="relative inline-flex h-7 w-12 items-center rounded-full transition-colors duration-200"
+                style={{backgroundColor: caState ? '#0091AD' : '#D1D5DB'}}
+                aria-label="Toggle California state programs"
+                role="switch"
+                aria-checked={caState}
+              >
+                <span className={`inline-block h-5 w-5 transform rounded-full bg-white shadow-md transition-transform duration-200 ${caState ? 'translate-x-6' : 'translate-x-1'}`} />
+              </button>
+            </div>
+            {caState && (
+              <div className="mt-3 pt-3 border-t" style={{borderColor: '#B2F5EA'}}>
+                <p className="text-xs" style={{color: '#0D9488'}}>
+                  California provides some of the most comprehensive state-level safety net programs in the country — including Medi-Cal coverage regardless of immigration status, CalEITC for ITIN filers, and CalWORKs grants that are among the highest in the nation. These programs can significantly buffer the impact of federal cuts.
+                </p>
+                {(household.mixedStatus || household.fullyUndocumented) && (
+                  <div className="mt-3 pt-3 border-t" style={{borderColor: '#B2F5EA'}}>
+                    <p className="text-xs font-medium text-gray-700 mb-2">
+                      Is this family enrolled in Medi-Cal?
+                    </p>
+                    <p className="text-xs text-gray-500 mb-3">
+                      California expanded full-scope Medi-Cal to all income-eligible residents regardless of immigration status — but many undocumented families never applied. Fear of government systems, language barriers, or simply not knowing the program exists keeps enrollment low. Starting January 2026, new enrollment for undocumented adults (19+) was frozen. Children under 19 can still enroll.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        onClick={() => onMedicalEnrollment("all")}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium border-2 transition-all"
+                        style={{
+                          backgroundColor: medicalEnrolledPreFreeze === "all" ? '#0D9488' : 'white',
+                          color: medicalEnrolledPreFreeze === "all" ? 'white' : '#0D9488',
+                          borderColor: '#0D9488',
+                        }}
+                      >
+                        Yes — whole family enrolled
+                      </button>
+                      {household.children > 0 && (
+                        <button
+                          onClick={() => onMedicalEnrollment("children-only")}
+                          className="px-3 py-1.5 rounded-lg text-xs font-medium border-2 transition-all"
+                          style={{
+                            backgroundColor: medicalEnrolledPreFreeze === "children-only" ? '#D97706' : 'white',
+                            color: medicalEnrolledPreFreeze === "children-only" ? 'white' : '#D97706',
+                            borderColor: '#D97706',
+                          }}
+                        >
+                          Children only — parents did not apply
+                        </button>
+                      )}
+                      <button
+                        onClick={() => onMedicalEnrollment("none")}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium border-2 transition-all"
+                        style={{
+                          backgroundColor: medicalEnrolledPreFreeze === "none" ? '#DC2626' : 'white',
+                          color: medicalEnrolledPreFreeze === "none" ? 'white' : '#DC2626',
+                          borderColor: '#DC2626',
+                        }}
+                      >
+                        No one enrolled
+                      </button>
+                    </div>
+                    {medicalEnrolledPreFreeze === "none" && (
+                      <div className="text-xs mt-2">
+                        <p style={{color: '#DC2626'}}>
+                          No one in this family has health coverage. {household.children > 0 ? "The children are technically still eligible to enroll — but the parents never applied, and enrollment requires interacting with a government system many undocumented families avoid." : ""}The enrollment freeze means the adults can no longer apply for full-scope coverage even if they wanted to.
+                        </p>
+                        <p className="mt-1" style={{color: '#92400E'}}>
+                          They still qualify for restricted-scope (emergency) Medi-Cal — covering ER visits, labor and delivery, and emergency dental. This is initiated by hospital billing departments after the fact, not something families sign up for. It keeps them from being turned away, but it is not healthcare.
+                        </p>
+                      </div>
+                    )}
+                    {medicalEnrolledPreFreeze === "children-only" && (
+                      <div className="text-xs mt-2">
+                        <p style={{color: '#D97706'}}>
+                          The children have full-scope Medi-Cal — likely enrolled through a school, clinic, or community navigator. The parents never applied for themselves. The enrollment freeze means they can no longer get full-scope coverage.
+                        </p>
+                        <p className="mt-1" style={{color: '#92400E'}}>
+                          The parents still qualify for restricted-scope (emergency) Medi-Cal — ER visits, labor and delivery, and emergency dental only. Initiated by hospital billing, not by application.
+                        </p>
+                      </div>
+                    )}
+                    {medicalEnrolledPreFreeze === "all" && (
+                      <p className="text-xs mt-2" style={{color: '#0D9488'}}>
+                        The whole family is enrolled in full-scope Medi-Cal. Adults retain coverage as long as they complete annual renewal — but face new $30/month cost-sharing starting July 2027, and dental benefits end July 2026.{household.children > 0 ? " Children's coverage is unaffected by these changes." : ""}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
           <div className="space-y-3">
-            {REGIONS.map((r) => {
+            {regions.map((r) => {
               const adj = adjustExpenses(household.expenses, r);
               const adjTotal = getExpenseTotal(adj);
               const baseTotal = getExpenseTotal(household.expenses);
               const diff = adjTotal - baseTotal;
+              const isUndocWorker = household.mixedStatus || household.fullyUndocumented;
+              const previewMult = household.isCustom ? 1.0
+                : isUndocWorker ? (1.0 + (r.incomeMult - 1.0) * 0.5)
+                : r.incomeMult;
+              const hasIncomeMult = caState && previewMult !== 1.0;
+              const adjIncome = hasIncomeMult ? Math.round(household.monthlyIncome * previewMult) : household.monthlyIncome;
+              const incomeDiff = adjIncome - household.monthlyIncome;
               return (
                 <button key={r.id} onClick={() => onSelect(r)} className="w-full text-left rounded-xl p-4 border-2 transition-all group" style={{background: 'var(--card-bg)', borderColor: 'var(--card-border)'}}>
                   <div className="flex items-center justify-between">
@@ -1928,13 +2619,18 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                         {diff === 0 ? (
                           <span className="text-gray-400">baseline</span>
                         ) : diff > 0 ? (
-                          <span className="text-red-600">+{formatMoney(diff)}/mo</span>
+                          <span className="text-red-600">+{formatMoney(diff)}/mo expenses</span>
                         ) : (
-                          <span className="text-emerald-600">{formatMoney(diff)}/mo</span>
+                          <span className="text-emerald-600">{formatMoney(diff)}/mo expenses</span>
                         )}
                       </div>
+                      {hasIncomeMult && (
+                        <div className="text-sm font-mono">
+                          <span className="text-emerald-600">+{formatMoney(incomeDiff)}/mo wages</span>
+                        </div>
+                      )}
                       <div className="text-xs text-gray-400">
-                        Housing: {Math.round(r.housingMult * 100)}% | Other: {Math.round(r.otherMult * 100)}%
+                        Housing: {Math.round(r.housingMult * 100)}%{hasIncomeMult ? ` | Wages: ${Math.round(previewMult * 100)}%` : ` | Other: ${Math.round(r.otherMult * 100)}%`}
                       </div>
                     </div>
                   </div>
@@ -1957,7 +2653,16 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
             <h2 className="text-2xl font-bold" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>{household.name}</h2>
             {household.mixedStatus && <span className="inline-block mt-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-sm font-medium">Mixed immigration status household</span>}
             {region && region.id !== "national-avg" && (
-              <p className="text-xs text-gray-400 mt-2">Expenses adjusted for: {region.name}</p>
+              <div className="mt-2">
+                <p className="text-xs text-gray-400">
+                  Expenses adjusted for: {region.name}
+                </p>
+                {household.caIncomeMult && household.originalIncome && (
+                  <p className="text-xs mt-1 px-3 py-1 rounded-lg inline-block" style={{backgroundColor: '#ECFDF5', color: '#059669'}}>
+                    Wages adjusted for CA region: {formatMoney(household.originalIncome)}/mo → {formatMoney(household.monthlyIncome)}/mo ({Math.round(household.caIncomeMult * 100)}% of national baseline)
+                  </p>
+                )}
+              </div>
             )}
           </div>
           <div className="rounded-xl p-5 mb-6" style={{backgroundColor: '#F8EFE0', borderLeft: '4px solid #FAD826'}}>
@@ -2127,6 +2832,55 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
             );
           })()}
 
+          {household.caState && (
+            <div className="rounded-xl p-4 mb-6" style={{backgroundColor: '#F0FDFA', border: '1px solid #B2F5EA', borderLeft: '4px solid #0091AD'}}>
+              <div className="flex items-start gap-2">
+                <span className="text-sm mt-0.5">🏛️</span>
+                <div>
+                  <h4 className="text-sm font-semibold mb-1" style={{color: '#134E4A', fontFamily: "'Archivo Narrow', sans-serif"}}>California State Programs Active</h4>
+                  <p className="text-sm leading-relaxed mb-2" style={{color: '#0F766E'}}>
+                    This household benefits from California's state-level safety net — programs that layer on top of federal benefits and, in some cases, fill gaps where federal programs exclude people.
+                  </p>
+                  {household.caBenefits && Object.entries(household.caBenefits).filter(([,v]) => v > 0).length > 0 && (
+                    <div className="space-y-1 mt-2">
+                      {Object.entries(household.caBenefits).filter(([,v]) => v > 0).map(([key, val]) => (
+                        <div key={key} className="flex justify-between text-xs">
+                          <span style={{color: '#0F766E'}}>{CA_BENEFIT_NAMES[key] || BENEFIT_NAMES[key] || key}</span>
+                          <span className="font-mono" style={{color: '#0D9488'}}>+{formatMoney(val)}/mo</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {household.caAnnualCredits && Object.entries(household.caAnnualCredits).filter(([,v]) => v > 0).length > 0 && (
+                    <div className="space-y-1 mt-2 pt-2 border-t" style={{borderColor: '#B2F5EA'}}>
+                      <p className="text-xs font-semibold mb-1" style={{color: '#0D9488'}}>Annual CA Tax Credits (at tax time)</p>
+                      {Object.entries(household.caAnnualCredits).filter(([,v]) => v > 0).map(([key, val]) => (
+                        <div key={key} className="flex justify-between text-xs">
+                          <span style={{color: '#0F766E'}}>{CA_BENEFIT_NAMES[key] || key}</span>
+                          <span className="font-mono" style={{color: '#0D9488'}}>+{formatMoney(val)}/year</span>
+                        </div>
+                      ))}
+                      {(household.mixedStatus || household.fullyUndocumented) && (
+                        <p className="text-xs mt-1 italic" style={{color: '#0D9488'}}>California allows ITIN filers to claim these credits — unlike any federal tax credit.</p>
+                      )}
+                    </div>
+                  )}
+                  {household.caEligibility && household.caEligibility.medicalExpansion && (household.mixedStatus || household.fullyUndocumented) && (
+                    <p className="text-xs mt-2 italic" style={{color: household.medicalEnrollment === "none" ? '#DC2626' : household.medicalEnrollment === "children-only" ? '#D97706' : '#0D9488'}}>
+                      {household.medicalEnrollment === "none"
+                        ? "No one in this family is enrolled in Medi-Cal. The adults can no longer apply after the January 2026 freeze. They qualify for emergency Medi-Cal only — ER visits initiated by hospital billing."
+                        : household.medicalEnrollment === "children-only"
+                        ? "Only the children have Medi-Cal. The parents never applied and can no longer enroll after the freeze. They qualify for emergency Medi-Cal only."
+                        : household.fullyUndocumented
+                        ? "Medi-Cal is this family's only health coverage — enrolled through California's expansion to all income-eligible residents regardless of immigration status."
+                        : "Medi-Cal covers all income-eligible California residents regardless of immigration status — parents excluded from federal Medicaid have full healthcare coverage here."}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
           <BudgetBar income={household.monthlyIncome} expenses={expenseTotal} benefits={benefitTotal} />
           <div className="mt-4 bg-blue-50 rounded-xl p-4 text-center">
             <p className="text-sm text-blue-800">
@@ -2203,6 +2957,12 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
       const hasPerKeyCut = !!round.perKeyCut;
       const isAffected = hasPerKeyCut || effectiveCutPercent > 0;
 
+      // ─── CA Protection Layer ───────────────────────────────────────────
+      const caBuffer = useMemo(() => getCABufferForRound(round.id, household), [round.id, household]);
+      const caProtectedKeys = useMemo(() => (caBuffer && caBuffer.protectedKeys) || [], [caBuffer]);
+      const caRemovedAreas = useMemo(() => (caBuffer && caBuffer.removedAreas) || [], [caBuffer]);
+      const isFullyBuffered = caBuffer && caBuffer.level === "full";
+
       // Check if any selected tradeoff overrides the cut percent
       const overrideCutPercent = useMemo(() => {
         for (const [area, oid] of Object.entries(selectedChoices)) {
@@ -2215,15 +2975,21 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
 
       const lostAmount = useMemo(() => {
         const keys = Array.isArray(round.programKey) ? round.programKey : [round.programKey];
+        // Exclude CA-protected keys from the loss calculation
+        const activeKeys = keys.filter(k => !caProtectedKeys.includes(k));
         if (hasPerKeyCut && overrideCutPercent === null) {
-          return keys.reduce((sum, key) => {
+          return activeKeys.reduce((sum, key) => {
             const pct = round.perKeyCut[key] || 0;
             return sum + Math.round((currentBenefits[key] || 0) * (pct / 100));
           }, 0);
         }
-        return keys.reduce((sum, key) => sum + Math.round((currentBenefits[key] || 0) * (finalCutPercent / 100)), 0);
-      }, [round, currentBenefits, finalCutPercent, hasPerKeyCut, overrideCutPercent]);
-      const relevantAreas = isAffected ? round.impactAreas.filter((a) => TRADEOFF_OPTIONS[a]) : [];
+        return activeKeys.reduce((sum, key) => sum + Math.round((currentBenefits[key] || 0) * (finalCutPercent / 100)), 0);
+      }, [round, currentBenefits, finalCutPercent, hasPerKeyCut, overrideCutPercent, caProtectedKeys]);
+
+      // Remove CA-buffered tradeoff areas from the list
+      const relevantAreas = isAffected
+        ? round.impactAreas.filter((a) => TRADEOFF_OPTIONS[a] && !caRemovedAreas.includes(a))
+        : [];
 
       // Awareness round
       if (round.isAwarenessRound && round.getAwarenessContent) {
@@ -2299,23 +3065,48 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
 
       // Unaffected
       if (!isAffected) {
+        // For fully undocumented households, "not affected" = "never included" — reframe as exclusion
+        const isExclusionFrame = household.fullyUndocumented && !round.isCASpecific;
+        const exclusionMessages = {
+          "snap-cut": "This family was never eligible for SNAP. No member has a qualified immigration status. The federal food assistance system does not include them.",
+          "medicaid-cap": "This family has no federal Medicaid coverage to cut. Undocumented residents are ineligible for Medicaid. In California, they rely on Medi-Cal instead — a state-funded program now facing its own budget pressure.",
+          "medicare-medicaid-combined": "This family has neither Medicare nor federal Medicaid. Both programs require qualified immigration status.",
+          "medicaid-work-req": "Work requirements don't apply — not because this family is exempt, but because they were never enrolled in federal Medicaid in the first place.",
+          "aca-premium-cliff": "This family is ineligible for ACA marketplace coverage. Undocumented residents cannot purchase plans on the exchange, even at full price. They have no access to premium subsidies.",
+          "tanf-cut": "This family has never had access to TANF. Cash assistance requires qualified immigration status for the parents.",
+          "housing-cut": "This family has never had a housing voucher. Section 8 and public housing require qualified immigration status. They find housing in the private market with no assistance.",
+          "oaa-nutrition": "This family is not eligible for Older Americans Act nutrition programs or LIHEAP. These federal programs require qualified immigration status.",
+          "liheap-only": "This family is not eligible for LIHEAP. Federal energy assistance requires qualified immigration status. In California, the CARE/FERA utility discount — which has no immigration status requirement — is their only energy cost relief.",
+        };
         return (
           <div className="py-2">
-            <div className="border-l-4 border-blue-400 rounded-r-xl p-5 mb-6" style={{backgroundColor: '#EFF6FF'}}>
-              <h2 className="text-xl font-bold text-blue-900 mb-2" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>{round.title}</h2>
-              <p className="text-blue-800 text-sm leading-relaxed">{round.description}</p>
-              <div className="mt-3"><span className="text-xs text-blue-600">{round.context}</span></div>
+            <div className={`border-l-4 ${isExclusionFrame ? "border-purple-400" : "border-blue-400"} rounded-r-xl p-5 mb-6`} style={{backgroundColor: isExclusionFrame ? '#FAF5FF' : '#EFF6FF'}}>
+              <h2 className={`text-xl font-bold ${isExclusionFrame ? "text-purple-900" : "text-blue-900"} mb-2`} style={{fontFamily: "'Archivo Narrow', sans-serif"}}>{round.title}</h2>
+              <p className={`${isExclusionFrame ? "text-purple-800" : "text-blue-800"} text-sm leading-relaxed`}>{round.description}</p>
+              <div className="mt-3"><span className={`text-xs ${isExclusionFrame ? "text-purple-600" : "text-blue-600"}`}>{round.context}</span></div>
             </div>
             <ProgramInfoBox info={round.programInfo} />
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-6">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">{"\u{1F6E1}\uFE0F"}</span>
-                <div>
-                  <h3 className="font-bold text-emerald-900 mb-2">Your household is not directly affected</h3>
-                  <p className="text-sm text-emerald-800 leading-relaxed">{round.unaffectedMessage || "This policy change doesn't directly impact your household's benefits."}</p>
+            {isExclusionFrame ? (
+              <div className="border border-purple-200 rounded-xl p-5 mb-6" style={{backgroundColor: '#FAF5FF', borderLeft: '4px solid #7C3AED'}}>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">{"\u{1F6AB}"}</span>
+                  <div>
+                    <h3 className="font-bold text-purple-900 mb-2">Not affected — because this family was never included</h3>
+                    <p className="text-sm text-purple-800 leading-relaxed">{exclusionMessages[round.id] || "This family has no access to this federal program. Undocumented residents are excluded from most federal benefits regardless of how long they've lived, worked, and paid taxes in the United States."}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-6">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">{"\u{1F6E1}\uFE0F"}</span>
+                  <div>
+                    <h3 className="font-bold text-emerald-900 mb-2">Your household is not directly affected</h3>
+                    <p className="text-sm text-emerald-800 leading-relaxed">{round.unaffectedMessage || "This policy change doesn't directly impact your household's benefits."}</p>
+                  </div>
+                </div>
+              </div>
+            )}
             <div className="flex items-center justify-center gap-4 mt-6">
               {onGoBack && <button onClick={onGoBack} className="px-5 py-3 rounded-xl font-medium text-sm transition-colors border-2 hover:opacity-80" style={{color: '#0091AD', borderColor: '#0091AD'}}>{"\u2190"} Previous round</button>}
               <button onClick={() => { onChoice({}, 0, 0); onContinue(); }} className="text-white px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-colors" style={{backgroundColor: '#0091AD'}}>Next policy round {"\u2192"}</button>
@@ -2325,7 +3116,8 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
       }
 
       // Affected
-      const allSelected = Object.keys(selectedChoices).length >= relevantAreas.length;
+      const noTradeoffsNeeded = relevantAreas.length === 0;
+      const allSelected = noTradeoffsNeeded || Object.keys(selectedChoices).length >= relevantAreas.length;
       return (
         <div className="py-2">
           <div className={`${round.isBudgetPressure ? "border-l-4 border-amber-500" : "border-l-4 border-red-500"} rounded-r-xl p-5 mb-6`} style={{backgroundColor: round.isBudgetPressure ? '#FFFBEB' : '#FEF2F2'}}>
@@ -2339,10 +3131,69 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
             </div>
           </div>
           <ProgramInfoBox info={round.programInfo} />
+          {/* ── CA Protection Callout (Full Buffer) ── */}
+          {caBuffer && caBuffer.level === "full" && caBuffer.callout && (
+            <div className="rounded-xl p-5 mb-6" style={{backgroundColor: '#ECFDF5', border: '1px solid #A7F3D0', borderLeft: '4px solid #059669'}}>
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">{"\u{1F6E1}\uFE0F"}</span>
+                <div>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider mb-1" style={{color: '#059669', fontFamily: "'Archivo Narrow', sans-serif"}}>California Protects</h4>
+                  <p className="text-sm leading-relaxed mb-1" style={{color: '#065F46'}}>{caBuffer.callout}</p>
+                  {caBuffer.note && <p className="text-xs leading-relaxed mt-2 italic" style={{color: '#047857'}}>{caBuffer.note}</p>}
+                </div>
+              </div>
+            </div>
+          )}
+          {/* ── CA Buffer Callout (Partial / Narrative) ── */}
+          {household.caState && (!caBuffer || caBuffer.level !== "full") && (() => {
+            const bufferMessages = [];
+            const keys = Array.isArray(round.programKey) ? round.programKey : [round.programKey];
+
+            // Show config-based callout for partial buffers
+            if (caBuffer && caBuffer.level === "partial" && caBuffer.callout) {
+              bufferMessages.push(caBuffer.callout);
+            }
+
+            // Narrative messages based on program keys and household characteristics
+            if (keys.includes("snap") && household.mixedStatus) {
+              bufferMessages.push("In California, the California Food Assistance Program (CFAP) provides CalFresh-equivalent benefits to some lawfully present immigrants excluded from federal SNAP. However, undocumented residents are not currently covered by CFAP.");
+            }
+            if (keys.includes("medicaid") || keys.includes("childMedicaid") || keys.includes("medicalExpansion")) {
+              if (household.mixedStatus) {
+                bufferMessages.push("California's Medi-Cal expansion covers all income-eligible residents regardless of immigration status — providing a crucial buffer for mixed-status families when federal Medicaid is cut. However, this state coverage faces its own budget pressure.");
+              } else {
+                bufferMessages.push("California's Medi-Cal program may absorb some coverage losses by maintaining broader eligibility than federal minimum requirements, but state budget constraints from the OBBB's cost-shifting limit this buffer.");
+              }
+            }
+            if ((keys.includes("tanf") || keys.includes("calworks")) && household.caBenefits && household.caBenefits.calworksBoost) {
+              bufferMessages.push("CalWORKs provides higher cash grants than federal TANF minimums — " + formatMoney(household.caBenefits.calworksBoost) + "/month above what federal TANF alone would provide. This state supplement partially cushions the erosion.");
+            }
+            if (keys.includes("liheap") && household.caBenefits && household.caBenefits.careDiscount && !(caBuffer && caBuffer.callout)) {
+              bufferMessages.push("California's CARE program provides a 32.5% discount on electricity bills — a separate state program that partially offsets LIHEAP cuts.");
+            }
+
+            if (bufferMessages.length === 0) return null;
+
+            return (
+              <div className="rounded-xl p-4 mb-6" style={{backgroundColor: '#F0FDFA', border: '1px solid #B2F5EA', borderLeft: '4px solid #0091AD'}}>
+                <div className="flex items-start gap-2">
+                  <span className="text-sm mt-0.5">{"\u{1F3DB}\uFE0F"}</span>
+                  <div>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider mb-1" style={{color: '#0D9488', fontFamily: "'Archivo Narrow', sans-serif"}}>California Buffer</h4>
+                    {bufferMessages.map((msg, i) => (
+                      <p key={i} className="text-xs leading-relaxed mb-1" style={{color: '#0F766E'}}>{msg}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+          {relevantAreas.length > 0 && (
           <div className="mb-6">
             <h3 className="font-bold text-gray-900 mb-1">What does this family sacrifice?</h3>
             <p className="text-sm text-gray-500 mb-4">Choose one tradeoff in each area. There are no good options.</p>
           </div>
+          )}
           <div className="space-y-6">
             {relevantAreas.map((area) => (
               <div key={area}>
@@ -2378,7 +3229,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
             <button onClick={() => { if (allSelected) { onChoice(selectedChoices, lostAmount, finalCutPercent); onContinue(); } }} disabled={!allSelected}
               className={`px-8 py-3 rounded-xl font-medium transition-colors ${allSelected ? "text-white hover:opacity-90" : "bg-gray-200 text-gray-400 cursor-not-allowed"}`}
               style={allSelected ? {backgroundColor: '#0091AD'} : {}}>
-              Confirm tradeoffs & next round {"\u2192"}
+              {noTradeoffsNeeded ? "Next policy round" : "Confirm tradeoffs & next round"} {"\u2192"}
             </button>
           </div>
         </div>
@@ -2521,17 +3372,86 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
           {household.mixedStatus && (() => {
             const familyName = household.isCustom ? "This family" : "The Ramirez family";
             const numKids = household.isCustom ? (household.children || 0) : 3;
-            const ctcLost = "$" + (household.isCustom ? (numKids * 2200) : (household.annualCredits?.ctc || 5820)).toLocaleString();
+            const ctcLostNum = household.isCustom ? Math.min(numKids * 1700, Math.max(0, (household.monthlyIncome * 12 - 2500) * 0.15)) : 3585;
+            const ctcLost = "$" + ctcLostNum.toLocaleString();
+            const caStateCredits = (household.caAnnualCredits && household.caAnnualCredits.caleitc) || 0;
+            const hasCACredits = household.caState && caStateCredits > 0;
+            const caStateCreditsStr = "$" + caStateCredits.toLocaleString();
             return (
             <div className="mt-8 rounded-xl p-6 text-white" style={{backgroundColor: '#7B1A5C'}}>
               <div className="pre-header mb-2" style={{color: '#F9A8D4'}}>SYSTEMIC EXCLUSION</div>
               <h3 className="font-bold text-lg mb-3" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>The hidden cost of immigration status</h3>
-              <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>{familyName} started this simulation with fewer benefits than other households. They had no access to Medicaid for the parents, no TANF, no housing assistance, and no EITC. Under the TCJA (2018–2025), they could at least claim the Child Tax Credit for their US-citizen children — about {ctcLost}/year. The OBBB took that away by requiring the filer to have an SSN.</p>
-              <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>These parents pay payroll taxes, sales taxes, and income taxes. They contribute approximately $1,100 annually to a Medicare Trust Fund they are legally barred from ever using, and pay into Social Security they will never collect. Their children are Americans. But policy choices treat them as if they don't exist — or worse, as if they don't deserve to.</p>
+              <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>{familyName} started this simulation with fewer benefits than other households. The parents had no Medicaid, no TANF, no housing assistance, and no EITC. Their US-citizen children qualified for SNAP and Medicaid — but the household SNAP benefit is pro-rated, counting only eligible members, so the family receives less than a citizen household of the same size. Under the TCJA (2018–2025), the parents could at least claim the Child Tax Credit for those children — about {ctcLost}/year. The OBBB took that away by requiring the filer to have an SSN.</p>
+              {hasCACredits ? (
+                <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>California partially offsets this loss: ITIN filers are eligible for the CalEITC and Young Child Tax Credit (YCTC), worth {caStateCreditsStr}/year for this family. This is a meaningful difference — and one that exists because California chose to recognize these families' contributions. But it does not fully replace the {ctcLost}/year in federal credits that were taken away.</p>
+              ) : household.caState ? (
+                <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>California allows ITIN filers to claim the CalEITC and Young Child Tax Credit — a meaningful policy distinction. However, this family's income exceeds the $32,900 eligibility threshold, so the state credits do not apply here. The federal loss stands unmitigated.</p>
+              ) : null}
+              <p className="text-sm leading-relaxed mb-4" style={{color: '#FBCFE8'}}>These parents pay payroll taxes, sales taxes, and income taxes. They contribute approximately $800 annually to a Medicare Trust Fund they are legally barred from ever using, and pay into Social Security they will never collect. Their children are Americans. But policy choices treat them as if they don't exist — or worse, as if they don't deserve to.</p>
               <p className="text-xs" style={{color: '#FAD826'}}>Undocumented immigrants contribute an estimated $25.6 billion per year to Social Security and $6.4 billion to Medicare (ITEP, 2024; based on 2022 tax data) — funds they are legally barred from ever accessing.</p>
             </div>
             );
           })()}
+
+          {household.fullyUndocumented && (() => {
+            const familyName = household.isCustom ? "This family" : "The Chen family";
+            const caStateCredits = (household.caAnnualCredits && household.caAnnualCredits.caleitc) || 0;
+            const hasCACredits = household.caState && caStateCredits > 0;
+            const caStateCreditsStr = "$" + caStateCredits.toLocaleString();
+            return (
+            <div className="mt-8 rounded-xl p-6 text-white" style={{backgroundColor: '#4C1D95'}}>
+              <div className="pre-header mb-2" style={{color: '#C4B5FD'}}>INVISIBLE BY DESIGN</div>
+              <h3 className="font-bold text-lg mb-3" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>The federal safety net was never built for this family</h3>
+              <p className="text-sm leading-relaxed mb-4" style={{color: '#DDD6FE'}}>{familyName} went through this simulation and was unaffected by most federal policy rounds — not because they were protected, but because the federal government never included them. No SNAP. No Medicaid. No TANF. No housing voucher. No EITC. No CTC. They pay taxes, raise children, work essential jobs, and contribute to communities. The safety net looks through them.</p>
+              {hasCACredits ? (
+                <p className="text-sm leading-relaxed mb-4" style={{color: '#DDD6FE'}}>California is the exception. Medi-Cal covered their healthcare. CalEITC and YCTC returned {caStateCreditsStr}/year in tax credits — because California recognizes ITIN filers. The CARE utility discount helped with energy costs. The Universal Meals Program fed their children at school. One state chose to see this family. But even California's safety net is now under pressure from the same federal budget cuts that were never meant to affect them directly.</p>
+              ) : (
+                <p className="text-sm leading-relaxed mb-4" style={{color: '#DDD6FE'}}>Without California's state programs, this family would have had almost no formal support at all. Their informal safety net — community networks, employer kindness, church donations, shared housing — is the only thing between them and crisis. That network is not a policy. It cannot scale. And it is invisible to every budget line in every appropriations bill.</p>
+              )}
+              <p className="text-sm leading-relaxed mb-4" style={{color: '#DDD6FE'}}>{familyName} contributes approximately $800 annually to a Medicare Trust Fund they are legally barred from ever using, and pays into Social Security they will never collect. They are part of the estimated 11 million undocumented residents who contribute $25.6 billion per year to Social Security and $6.4 billion to Medicare — funds they are legally barred from ever accessing.</p>
+              <p className="text-xs" style={{color: '#FAD826'}}>The question this simulation asks is not "what happens when the safety net is cut?" For this family, the question is: "what happens when you were never caught by it in the first place?"</p>
+            </div>
+            );
+          })()}
+
+          {household.caState && (
+            <div className="mt-8 rounded-xl p-6" style={{backgroundColor: '#F0FDFA', border: '2px solid #0091AD'}}>
+              <div className="pre-header mb-2" style={{color: '#0091AD'}}>CALIFORNIA'S ROLE</div>
+              <h3 className="font-bold text-lg mb-3" style={{fontFamily: "'Archivo Narrow', sans-serif", color: '#134E4A'}}>How California's safety net cushioned the blow</h3>
+              <p className="text-sm leading-relaxed mb-3" style={{color: '#0F766E'}}>
+                California maintains some of the most comprehensive state-level safety net programs in the country. For this household, state programs provided an additional layer of support that partially offset federal cuts:
+              </p>
+              {household.caBenefits && Object.entries(household.caBenefits).filter(([,v]) => v > 0).length > 0 && (
+                <div className="bg-white rounded-lg p-4 mb-3">
+                  {Object.entries(household.caBenefits).filter(([,v]) => v > 0).map(([key, val]) => (
+                    <div key={key} className="flex justify-between text-sm py-1 border-b border-gray-50 last:border-0">
+                      <span className="text-gray-700">{CA_BENEFIT_NAMES[key] || BENEFIT_NAMES[key] || key}</span>
+                      <span className="font-mono font-semibold" style={{color: '#0091AD'}}>+{formatMoney(val)}/mo</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {household.caAnnualCredits && Object.entries(household.caAnnualCredits).filter(([,v]) => v > 0).length > 0 && (
+                <div className="bg-white rounded-lg p-4 mb-3">
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{color: '#0D9488'}}>Annual CA Tax Credits</p>
+                  {Object.entries(household.caAnnualCredits).filter(([,v]) => v > 0).map(([key, val]) => (
+                    <div key={key} className="flex justify-between text-sm py-1 border-b border-gray-50 last:border-0">
+                      <span className="text-gray-700">{CA_BENEFIT_NAMES[key] || key}</span>
+                      <span className="font-mono font-semibold" style={{color: '#0091AD'}}>+{formatMoney(val)}/year</span>
+                    </div>
+                  ))}
+                  {(household.mixedStatus || household.fullyUndocumented) && (
+                    <p className="text-xs mt-2 italic" style={{color: '#0D9488'}}>
+                      California allows ITIN filers to claim these state tax credits — a direct offset to the federal credits this family lost.
+                    </p>
+                  )}
+                </div>
+              )}
+              <p className="text-xs italic" style={{color: '#0D9488'}}>
+                But California's safety net is not invulnerable. Federal cost-shifting from the OBBB puts state budgets under enormous pressure. If California is forced to cut CalWORKs, freeze Medi-Cal enrollment, or reduce childcare subsidies, these buffers disappear — and families fall harder.
+              </p>
+            </div>
+          )}
 
           <div className="mt-8 rounded-xl p-6 text-white" style={{backgroundColor: '#000'}}>
             <h3 className="font-bold text-lg mb-3" style={{fontFamily: "'Archivo Narrow', sans-serif"}}>What this means</h3>
@@ -2617,7 +3537,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
           <div className="v2-section v2-section-cream">
             <div className="v2-section-inner">
           <div className="mb-3 text-center">
-            <p className="text-xs" style={{color: '#0091AD'}}>Data current as of February 2026. Sources include CBO supplemental analysis of H.R. 1, USDA-FNS, CMS, IRS, KFF, and ITEP.</p>
+            <p className="text-xs" style={{color: '#0091AD'}}>Data current as of March 2026. Sources include CBO supplemental analysis of H.R. 1, USDA-FNS, CMS, IRS, KFF, and ITEP.</p>
           </div>
 
           {(() => {
@@ -2632,7 +3552,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                   <div className="bg-white border border-t-0 border-gray-200 rounded-b-xl px-5 py-4 text-xs text-gray-600 leading-relaxed space-y-3">
                     <div>
                       <p className="font-semibold text-gray-700 mb-1">Household profiles</p>
-                      <p>Composite families based on published program eligibility rules, income thresholds, and benefit formulas from CMS, USDA-FNS, SSA, HHS, and IRS. No profile represents an actual family. Preset household benefits are hand-set composite estimates based on each family's narrative circumstances; the custom household builder computes benefits dynamically using the same federal parameters. All eligibility thresholds use standard federal rules (e.g., 130% FPL gross income test for SNAP, 138% FPL for Medicaid expansion, 150% FPL for LIHEAP). State-specific expansions such as Broad-Based Categorical Eligibility (BBCE) for SNAP are not modeled.</p>
+                      <p>Composite families based on published program eligibility rules, income thresholds, and benefit formulas from CMS, USDA-FNS, SSA, HHS, and IRS. No profile represents an actual family. Six preset households span single parents, elderly couples, working families, mixed-status families, a fully undocumented family, and a self-employed middle-class family. The fully undocumented household (the Chen family) reflects the z\u01D2uxi\xE0n migration pipeline from China and is deliberately set at an income level ($26,400/year) that qualifies for CalEITC and YCTC when the California toggle is active. Their compressed budget (shared room, no car, no formal childcare, community-sourced clothing) reflects the reality of how undocumented families minimize expenses. Preset household benefits are hand-set composite estimates based on each family's narrative circumstances; the custom household builder computes benefits dynamically using the same federal parameters. The custom builder supports three immigration statuses: US citizen/LPR, mixed-status, and fully undocumented. All eligibility thresholds use standard federal rules (e.g., 130% FPL gross income test for SNAP, 138% FPL for Medicaid expansion, 150% FPL for LIHEAP). State-specific expansions such as Broad-Based Categorical Eligibility (BBCE) for SNAP are not modeled.</p>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-700 mb-1">SNAP benefits</p>
@@ -2667,6 +3587,10 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                       <p>Undocumented immigrants contribute an estimated $25.6B/year to Social Security and $6.4B to Medicare (based on 2022 tax data). Source: Institute on Taxation and Economic Policy (ITEP), 2024.</p>
                     </div>
                     <div>
+                      <p className="font-semibold text-gray-700 mb-1">Household income levels</p>
+                      <p>Preset household incomes reflect below-median wages for each occupation, consistent with the low-income households this simulator models. Maria ($1,680/mo) earns below the BLS median for home health aides ($16.78/hr median, May 2024) working 30 hours/week. The Johnsons ($3,200/mo combined) reflect entry-level warehouse and part-time retail. The Ramirez family ($2,200/mo combined) reflects wages typical of undocumented workers in landscaping and domestic work at national baseline rates; the $11\u201314/hour range reflects cash-pay arrangements common in the informal economy. The Chen family ($2,200/mo combined) reflects restaurant kitchen and garment shop wages typical of recently arrived undocumented Chinese immigrants. Both families are set at income levels representative of the 3.6 million California households that qualify for CalEITC when the CA toggle is active. James and Dorothy ($2,340/mo) reflect below-average Social Security benefits typical of low-income careers without pensions. Income is held constant across non-California regions \u2014 federal benefit levels do not adjust for local wages or cost of living, and this gap is part of what the simulator illustrates. Sources: BLS Occupational Employment and Wage Statistics (May 2024), SSA benefit data, CalEITC Coalition data (2024).</p>
+                    </div>
+                    <div>
                       <p className="font-semibold text-gray-700 mb-1">Regional cost adjustments</p>
                       <p>Housing and cost-of-living multipliers derived from FY2025 HUD Fair Market Rents and 2023 BEA Regional Price Parities. Sources: HUD FMR data, BEA RPP tables.</p>
                     </div>
@@ -2675,8 +3599,16 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
                       <p>Housing voucher eligibility uses a simplified national proxy (~$35,000/year AMI for a family of 4, scaled by household size) as an approximate 50% Area Median Income gate. Actual HUD AMI varies significantly by county and metropolitan area. Preset households use curated housing benefit values based on their narrative circumstances.</p>
                     </div>
                     <div>
+                      <p className="font-semibold text-gray-700 mb-1">California state programs</p>
+                      <p>CalWORKs MAP levels per CDSS October 2024 schedule with July 2025 5% increase. Medi-Cal expansion per SB 75 (children, 2016), AB 133 (50+, 2022), SB 184 (all ages, Jan 2024). CalEITC and YCTC per FTB 2025 tax year guidance; CalEITC income limit $32,900, maximum credit $3,756 (3+ children); YCTC provides up to $1,189 per qualifying child under age 6 and requires CalEITC eligibility; ITIN filers eligible per AB 1847 (2020). CARE/FERA income limits per CPUC 2025-2026 schedule; CARE provides approximately 32.5% discount on electric and 20% on gas. California Universal Meals Program (AB 130, 2021) provides free breakfast and lunch to all TK-12 public school students regardless of income or immigration status. CAPI payment standards per CDSS January 2025 schedule.</p>
+                      <p className="mt-1"><strong>Medi-Cal enrollment freeze:</strong> Per 2025-26 budget trailer bill language, effective January 1, 2026, new full-scope Medi-Cal enrollment for undocumented adults age 19 and older was frozen. Children under 19 and pregnant individuals can still enroll regardless of immigration status. Existing adult enrollees retain full-scope coverage if they complete annual renewal but face new cost-sharing ($30/month starting July 2027) and loss of dental benefits (July 2026). All undocumented adults — including those who did not enroll before the freeze — remain eligible for restricted-scope (emergency) Medi-Cal, which covers ER visits, labor and delivery, and emergency dental; this is initiated retroactively by hospital billing departments. The simulator asks users to specify the family's enrollment status (whole family enrolled, children only, or no one enrolled) when the California toggle is active for undocumented or mixed-status households. Sources: DHCS, CDSS, FTB, CPUC, CDE, California Budget Center, BLS OEWS.</p>
+                      <p className="mt-1">When the California toggle is active, preset household incomes are adjusted upward by a sub-region-specific multiplier reflecting higher California wages. Documented workers receive the full regional multiplier (10\u201330%), derived from BLS Occupational Employment and Wage Statistics (May 2024) comparing California metro-area wages to national medians. Undocumented and mixed-status workers receive 50% of the regional wage premium: market forces (cost of living, competition for labor in tight markets) push wages up even in cash-pay arrangements, but wage theft, sub-minimum-wage pay, and inability to file labor complaints mean these workers capture only a fraction of the documented wage premium. For example, Bay Area documented workers receive the full 30% premium while undocumented/mixed-status workers receive a 15% premium. This ensures the Ramirez and Chen families remain representative of the approximately 900,000 Bay Area households and 3.6 million statewide households that qualify for CalEITC (CalEITC Coalition, 2024). Custom household incomes are not adjusted.</p>
+                    </div>
+                    <div>
                       <p className="font-semibold text-gray-700 mb-1">Methodology note</p>
                       <p>Stability scores are illustrative, not predictive. They reflect cumulative tradeoff severity across rounds. Cut percentages are modeled estimates based on CBO scoring and policy analysis, not exact statutory reduction rates \u2014 actual impacts will vary by state and individual circumstances. Some provisions (e.g., state SNAP cost-sharing) phase in through FY2028; this simulator compresses projected 10-year impacts into a single simulation for educational purposes. Budget-pressure scenarios (TANF, Housing) are labeled separately as they are not direct OBBB provisions. The simulator does not dynamically recalculate benefits when tradeoff choices affect income. Housing voucher amounts reflect HUD formulas where higher income reduces the subsidy \u2014 larger families with higher earnings may receive smaller vouchers than smaller households. All dollar figures are monthly unless noted.</p>
+                      <p className="mt-1">California offers child-only CalWORKs grants to citizen children in mixed-status families when their parents are excluded from the assistance unit. The simulator does not model these grants. Calculating child-only CalWORKs requires a separate set of eligibility rules — including how parental income is counted against the children's grant — that this tool does not yet incorporate. As a result, this simulator understates California's actual safety net for mixed-status families with citizen children.</p>
+                      <p className="mt-1">For fully undocumented households, the simulator models exclusion from all federal programs that require qualified immigration status (SNAP, Medicaid, TANF, housing vouchers, LIHEAP, EITC, CTC). Only programs with no status verification (WIC, school meals) are available federally. Rounds that do not affect these families are presented with an exclusion frame ("not affected — because this family was never included") rather than as protection. In California, the three-way Medi-Cal enrollment question produces different benefit values: "whole family" uses the full calculated Medi-Cal value, "children only" uses children's coverage only ($300/child/month), and "no one enrolled" zeros out the benefit entirely. Emergency Medi-Cal is noted but not assigned a dollar value because it cannot be budgeted around.</p>
                     </div>
                   </div>
                 )}
@@ -2708,53 +3640,80 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
       const [qolHistory, setQolHistory] = useState([]);
       const [roundSnapshots, setRoundSnapshots] = useState([]);
       const [hasCompletedSim, setHasCompletedSim] = useState(false);
+      const [caState, setCaState] = useState(false);
+      const [medicalEnrolledPreFreeze, setMedicalEnrolledPreFreeze] = useState(null); // null = unanswered, "all" | "children-only" | "none"
 
       useEffect(() => { setTimeout(() => { window.scrollTo(0, 0); }, 50); }, [screen, currentRound]);
 
       const restart = useCallback(() => {
         setScreen("select"); setHousehold(null); setRegion(null); setAdjustedExpenses({});
-        setCurrentRound(0); setCurrentBenefits({}); setQualityScore(100); setAllChoices([]); setSkippedRounds([]); setQolHistory([]); setRoundSnapshots([]);
+        setCurrentRound(0); setCurrentBenefits({}); setQualityScore(100); setAllChoices([]); setSkippedRounds([]); setQolHistory([]); setRoundSnapshots([]); setCaState(false); setMedicalEnrolledPreFreeze(null);
       }, []);
 
       const selectHousehold = useCallback((hh) => {
-        setHousehold(hh);
-        if (hh.isCustom) {
+        let selectedHH = hh;
+        if (hh.isCustom && caState) {
+          selectedHH = applyCALayer(hh, hh.customRegion || REGIONS.find(r => r.id === "national-avg"), { medicalEnrolledPreFreeze });
+        }
+        setHousehold(selectedHH);
+        if (selectedHH.isCustom) {
           // Custom households have region-adjusted expenses already baked in
-          const region = hh.customRegion || REGIONS.find(r => r.id === "national-avg");
+          const region = selectedHH.customRegion || REGIONS.find(r => r.id === "national-avg");
           setRegion(region);
-          setAdjustedExpenses({ ...hh.expenses });
-          setCurrentBenefits({ ...hh.benefits });
-          const bq = hh.baselineQuality || 100;
-          setQualityScore(bq);
+          setAdjustedExpenses({ ...selectedHH.expenses });
+          setCurrentBenefits({ ...selectedHH.benefits });
+          const bq = selectedHH.baselineQuality || 100;
+          const caBonus = caState ? Math.min(8, Object.keys(selectedHH.caBenefits || {}).filter(k => (selectedHH.caBenefits[k] || 0) > 0).length * 2) : 0;
+          const adjustedBq = Math.min(97, bq + caBonus);
+          setQualityScore(adjustedBq);
           setAllChoices([]);
           setSkippedRounds([]);
-          setQolHistory([{ label: "Start", score: bq }]);
+          setQolHistory([{ label: "Start", score: adjustedBq }]);
           setCurrentRound(0);
           setScreen("householdIntro");
         } else {
           setScreen("regionSelect");
         }
-      }, []);
+      }, [caState, medicalEnrolledPreFreeze]);
 
       const rounds = useMemo(() => {
         if (!household) return POLICY_ROUNDS;
-        return POLICY_ROUNDS.filter((r) => !r.appliesTo || r.appliesTo(household));
-      }, [household]);
+        let applicableRounds = POLICY_ROUNDS.filter((r) => !r.appliesTo || r.appliesTo(household));
+        if (caState && household) {
+          const caRounds = CA_POLICY_ROUNDS.filter((r) => !r.appliesTo || r.appliesTo(household));
+          applicableRounds = [...applicableRounds, ...caRounds];
+        }
+        return applicableRounds;
+      }, [household, caState]);
 
       const selectRegion = useCallback((r) => {
         setRegion(r);
-        const adj = adjustExpenses(household.expenses, r);
+        let hh = household;
+        if (caState) {
+          hh = applyCALayer(household, r, { medicalEnrolledPreFreeze });
+          setHousehold(hh);
+        }
+        const adj = adjustExpenses(hh.expenses, r);
         setAdjustedExpenses(adj);
-        setCurrentBenefits({ ...household.benefits });
-        const bq = household.baselineQuality || 100;
-        setQualityScore(bq); setAllChoices([]); setSkippedRounds([]); setQolHistory([{ label: "Start", score: bq }]); setCurrentRound(0);
+        setCurrentBenefits({ ...hh.benefits });
+        const bq = hh.baselineQuality || 100;
+        // CA safety net provides a small stability buffer
+        const caBonus = caState ? Math.min(8, Object.keys(hh.caBenefits || {}).filter(k => (hh.caBenefits[k] || 0) > 0).length * 2) : 0;
+        const adjustedBq = Math.min(97, bq + caBonus);
+        setQualityScore(adjustedBq); setAllChoices([]); setSkippedRounds([]); setQolHistory([{ label: "Start", score: adjustedBq }]); setCurrentRound(0);
         setScreen("householdIntro");
-      }, [household]);
+      }, [household, caState, medicalEnrolledPreFreeze]);
 
       const handleRoundChoice = useCallback((choices, lostAmount, effectiveCut, awarenessQualityPenalty = 0) => {
         setRoundSnapshots((prev) => [...prev, { benefits: { ...currentBenefits }, quality: qualityScore, choices: [...allChoices], skipped: [...skippedRounds], history: [...qolHistory] }]);
         const round = rounds[currentRound];
         const keys = Array.isArray(round.programKey) ? round.programKey : [round.programKey];
+
+        // CA protection: determine which keys are shielded from cuts
+        const caBuffer = getCABufferForRound(round.id, household);
+        const caProtectedKeys = (caBuffer && caBuffer.protectedKeys) || [];
+        const activeKeys = keys.filter(k => !caProtectedKeys.includes(k));
+
         if (effectiveCut === 0 && !round.perKeyCut) {
           const wasAffected = awarenessQualityPenalty > 0 || Object.keys(choices).length > 0;
           if (!wasAffected) setSkippedRounds((p) => [...p, round.id]);
@@ -2770,9 +3729,9 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         setCurrentBenefits((prev) => {
           const next = { ...prev };
           if (round.perKeyCut) {
-            keys.forEach((k) => { const pct = round.perKeyCut[k] || 0; if (next[k] !== undefined) next[k] = Math.max(0, Math.round(next[k] * (1 - pct / 100))); });
+            activeKeys.forEach((k) => { const pct = round.perKeyCut[k] || 0; if (next[k] !== undefined) next[k] = Math.max(0, Math.round(next[k] * (1 - pct / 100))); });
           } else {
-            keys.forEach((k) => { if (next[k] !== undefined) next[k] = Math.max(0, Math.round(next[k] * (1 - effectiveCut / 100))); });
+            activeKeys.forEach((k) => { if (next[k] !== undefined) next[k] = Math.max(0, Math.round(next[k] * (1 - effectiveCut / 100))); });
           }
           return next;
         });
@@ -2782,7 +3741,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
         }, 0);
         setQualityScore((p) => Math.max(0, p - penalty));
         setAllChoices((p) => [...p, choices]);
-      }, [currentRound, rounds, currentBenefits, qualityScore, allChoices, skippedRounds, qolHistory]);
+      }, [currentRound, rounds, currentBenefits, qualityScore, allChoices, skippedRounds, qolHistory, household]);
 
       const advanceRound = useCallback(() => {
         setQolHistory((h) => [...h, { label: rounds[currentRound]?.chartLabel || rounds[currentRound]?.title?.split(" ")[0] || `R${currentRound + 1}`, score: qualityScore }]);
@@ -2854,7 +3813,7 @@ ${skippedList ? `<h2>Policies That Did Not Directly Affect This Household</h2><u
             {screen === "regionSelect" && household && (
               <div className="v2-section v2-section-white">
                 <div className="v2-section-inner">
-                  <RegionSelect household={household} onSelect={selectRegion} />
+                  <RegionSelect household={household} onSelect={selectRegion} caState={caState} onCaToggle={setCaState} medicalEnrolledPreFreeze={medicalEnrolledPreFreeze} onMedicalEnrollment={setMedicalEnrolledPreFreeze} />
                 </div>
               </div>
             )}
